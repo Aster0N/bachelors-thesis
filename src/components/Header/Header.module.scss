@@ -1,0 +1,6 @@
+@use "@/styles/variables.scss" as *;
+
+.header {
+  background-color: $helper;
+	height: 80px;
+}

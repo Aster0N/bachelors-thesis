@@ -1,12 +1,24 @@
-@use "@/styles/variables.scss" as *;
+@use "./fonts.scss" as *;
+@use "./variables.scss" as *;
 
 body,
 html {
   margin: 0;
   padding: 0;
+  height: 100%;
   background-color: $page;
   font-family: "manrope-regular", sans-serif;
   color: $text-dark;
+}
+
+._layout_wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
 }
 
 h1 {
@@ -70,4 +82,9 @@ big {
   font-weight: 700;
   font-size: 12px;
   line-height: 167%;
+}
+
+._wrapper {
+  width: 66vw;
+  margin: 0 auto;
 }

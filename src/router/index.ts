@@ -2,11 +2,8 @@ import Home from "@/pages/Home.tsx"
 import React from "react"
 import { ROUTES } from "./routes.ts"
 
-type Route = {
-  path: string
-  element: React.ReactElement
-}
+import type { RouteElement } from "./types.ts"
 
-export const unauthRoutes: Route[] = [
-  { path: ROUTES.MAIN_PATH, element: React.createElement(Home) },
+export const unauthRoutes: RouteElement[] = [
+  { path: ROUTES.ROOT_PATH, element: React.createElement(Home) },
 ]

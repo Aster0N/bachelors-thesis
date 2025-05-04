@@ -1,6 +1,6 @@
-type Routes = Record<string, string>
+import type { RouteNamesToPath } from "./types"
 
-export const ROUTES: Routes = {
-  MAIN_PATH: "/",
-  PROFILE_PATH: "/user",
+export const ROUTES: RouteNamesToPath = {
+  ROOT_PATH: "/",
+  AUTH_PATH: "/auth",
 }
