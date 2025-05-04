@@ -1,0 +1,73 @@
+@use "@/styles/variables.scss" as *;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: $page;
+  font-family: "manrope-regular", sans-serif;
+  color: $text-dark;
+}
+
+h1 {
+  font-family: "manrope-bold", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-family: "manrope-bold", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-family: "manrope-bold", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+}
+
+p {
+  font-family: "manrope-regular", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 112%;
+}
+
+big {
+  font-family: "manrope-regular", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 122%;
+}
+
+._huge {
+  font-family: "manrope-light", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+._small {
+  font-family: "manrope-regular", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+._caption {
+  font-family: "manrope-regular", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 117%;
+}
+
+._caption-bold {
+  font-family: "manrope-bold", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 167%;
+}
