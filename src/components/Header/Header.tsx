@@ -1,9 +1,12 @@
+import HeaderNavbar from "@/modules/HeaderNavbar/HeaderNavbar"
 import classes from "./Header.module.scss"
 
 const Header = () => {
   return (
     <div className={classes.header}>
-      <div className="_wrapper">header</div>
+      <div className={[classes.headerBody, "_wrapper"].join(" ")}>
+        <HeaderNavbar />
+      </div>
     </div>
   )
 }

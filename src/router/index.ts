@@ -1,9 +1,9 @@
-import Home from "@/pages/Home.tsx"
+import AuthPage from "@/pages/AuthPage/AuthPage.tsx"
 import React from "react"
-import { ROUTES } from "./routes.ts"
+import { PUBLIC_ROUTES } from "./routes.ts"
 
 import type { RouteElement } from "./types.ts"
 
-export const unauthRoutes: RouteElement[] = [
-  { path: ROUTES.ROOT_PATH, element: React.createElement(Home) },
+export const publicRoutes: RouteElement[] = [
+  { path: PUBLIC_ROUTES.AUTH_PATH, element: React.createElement(AuthPage) },
 ]
