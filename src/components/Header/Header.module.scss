@@ -3,6 +3,8 @@
 .header {
   background-color: $helper;
   height: 80px;
+  border-bottom-left-radius: $border-radius-l;
+  border-bottom-right-radius: $border-radius-l;
 }
 
 .headerBody {
