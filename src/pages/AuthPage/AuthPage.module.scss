@@ -1,0 +1,17 @@
+@use "@/styles/variables.scss" as *;
+
+.authFormWrapper {
+  margin: 50px auto 0;
+  border-radius: $border-radius-m;
+  border: 1px solid $text-dark;
+  padding: 50px 70px;
+  width: fit-content;
+}
+
+.authFormName {
+  margin: 0 0 20px 0;
+}
+
+.changeFormButton {
+  margin: 15px 0 0 0;
+}
