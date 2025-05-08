@@ -1,0 +1,18 @@
+@use "@/styles/variables.scss" as *;
+
+.button {
+  padding: 10px 20px;
+  background-color: $secondary;
+  color: $text-light;
+  border-radius: $border-radius-m;
+  outline: none;
+  border: 2px solid transparent;
+  width: fit-content;
+  cursor: pointer;
+  transition: border 0.3s ease-out;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $primary;
+  }
+}
