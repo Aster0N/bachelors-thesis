@@ -5,9 +5,19 @@ interface InputProps {
   label: string
   placeholder?: string
   type: string
+  name?: string
+  required?: boolean
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-const Input = ({ label, placeholder, type }: InputProps) => {
+const Input = ({
+  label,
+  placeholder,
+  type,
+  name = label,
+  required = true,
+  onChange,
+}: InputProps) => {
   const inputId = useId()
 
   return (
@@ -18,7 +28,10 @@ const Input = ({ label, placeholder, type }: InputProps) => {
           id={inputId}
           placeholder={placeholder}
           type={type}
+          name={name}
           className={classes.input}
+          required={required}
+          onChange={onChange}
         />
       </label>
     </>
