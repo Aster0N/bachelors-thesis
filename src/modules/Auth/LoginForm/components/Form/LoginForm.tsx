@@ -1,6 +1,6 @@
+import Button from "@/components/Button/Button"
 import Input from "@/components/Input/Input"
 import classes from "./LoginForm.module.scss"
-import Button from "@/components/Button/Button"
 
 const LoginForm = () => {
   return (
@@ -12,4 +12,4 @@ const LoginForm = () => {
   )
 }
 
-export default LoginForm
+export { LoginForm }

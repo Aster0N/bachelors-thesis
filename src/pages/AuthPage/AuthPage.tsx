@@ -1,5 +1,5 @@
 import LinkedButton from "@/components/LinkedButton/LinkedButton"
-import LoginForm from "@/modules/Auth/LoginForm/components/Form/LoginForm"
+import { LoginForm } from "@/modules/Auth/LoginForm/index.ts"
 import { useState } from "react"
 import classes from "./AuthPage.module.scss"
 
