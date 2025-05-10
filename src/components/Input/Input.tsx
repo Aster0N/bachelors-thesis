@@ -8,6 +8,7 @@ interface InputProps {
   name?: string
   required?: boolean
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  className?: string | string[]
 }
 
 const Input = ({
@@ -17,6 +18,7 @@ const Input = ({
   name = label,
   required = true,
   onChange,
+  className,
 }: InputProps) => {
   const inputId = useId()
 
@@ -29,7 +31,7 @@ const Input = ({
           placeholder={placeholder}
           type={type}
           name={name}
-          className={classes.input}
+          className={[classes.input, className].join(" ")}
           required={required}
           onChange={onChange}
         />

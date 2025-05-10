@@ -2,10 +2,6 @@ import { z } from "zod"
 import { loginSchema } from "../constants/formConfig"
 import type { LoginFormData } from "../types/types"
 
-// type FormValidatorProps = {
-//   name: string | keyof LoginFormData
-//   value: string
-// }
 type ValidationResult = {
   isSuccess: boolean
   errors: {

@@ -61,8 +61,17 @@ const LoginForm = () => {
             type={config.type}
             name={config.name}
             onChange={handleChange}
+            className={
+              userFormData[key as keyof LoginFormData].error
+                ? classes.inputError
+                : ""
+            }
           />
-          <span>{userFormData[key as keyof LoginFormData].error}</span>
+          <span
+            className={[classes.validationError, "_caption-bold"].join(" ")}
+          >
+            {userFormData[key as keyof LoginFormData].error}
+          </span>
         </div>
       ))}
       <Button>войти</Button>
