@@ -1,4 +1,4 @@
-type FormField = {
+export type FormField = {
   value: string
   error: string
   isDirty: boolean

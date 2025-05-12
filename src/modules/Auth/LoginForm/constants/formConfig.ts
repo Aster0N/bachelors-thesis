@@ -1,17 +1,15 @@
 import { z } from "zod"
-import { LoginFormData } from "../types/types"
+import { FormField, LoginFormData } from "../types/types"
+
+const initialFieldValue: FormField = {
+  value: "",
+  error: "",
+  isDirty: false,
+}
 
 export const initialState: LoginFormData = {
-  email: {
-    value: "",
-    error: "",
-    isDirty: false,
-  },
-  password: {
-    value: "",
-    error: "",
-    isDirty: false,
-  },
+  email: initialFieldValue,
+  password: initialFieldValue,
 }
 
 export const loginFormConfig = {
