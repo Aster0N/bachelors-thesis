@@ -27,9 +27,8 @@ const AuthPage = () => {
         {!showLoginForm && <RegistrationForm />}
         <div
           className={[classes.changeFormLable, "_small"].join(" ")}
-          onClick={() => setShowLoginForm(!showLoginForm)}
         >
-          <LinkedButton className={classes.changeFormButton}>
+          <LinkedButton className={classes.changeFormButton} onClick={() => setShowLoginForm(!showLoginForm)}>
             {showLoginForm
               ? "зарегистрировать новый аккаунт"
               : "войти с имеющимся аккаунтом"}
