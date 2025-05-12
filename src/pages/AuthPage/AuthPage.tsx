@@ -1,5 +1,6 @@
 import LinkedButton from "@/components/LinkedButton/LinkedButton"
 import { LoginForm } from "@/modules/Auth/LoginForm/index.ts"
+import { RegistrationForm } from "@/modules/Auth/RegistrationForm/components/RegistrationForm"
 import { useState } from "react"
 import classes from "./AuthPage.module.scss"
 
@@ -23,9 +24,7 @@ const AuthPage = () => {
           {showLoginForm ? "Войти в систему" : "Зарегистрироваться"}
         </h3>
         {showLoginForm && <LoginForm />}
-        {!showLoginForm && (
-          <div className="_huge">here will be registration form</div>
-        )}
+        {!showLoginForm && <RegistrationForm />}
         <div
           className={[classes.changeFormLable, "_small"].join(" ")}
           onClick={() => setShowLoginForm(!showLoginForm)}
