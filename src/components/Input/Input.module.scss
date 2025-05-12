@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  position: relative;
 
   span {
     margin: 0 0 3px 0;
@@ -22,5 +23,31 @@
   &:hover,
   &:focus {
     border: 2px solid $helper;
+  }
+
+  &.extraPadding {
+    padding: 8px 35px 8px 10px;
+  }
+}
+
+.showPassword {
+  padding: 5px;
+  background-color: transparent;
+  border-radius: $border-radius-s;
+  outline: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border 0.3s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $secondary;
   }
 }

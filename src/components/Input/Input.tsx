@@ -1,5 +1,7 @@
-import { useId } from "react"
+import { useId, useState } from "react"
 import classes from "./Input.module.scss"
+import EyeClosedImg from "./img/eye-off.svg"
+import EyeImg from "./img/eye.svg"
 
 interface InputProps {
   label: string
@@ -21,6 +23,7 @@ const Input = ({
   className,
 }: InputProps) => {
   const inputId = useId()
+  const [showPassword, setShowPassword] = useState(false)
 
   return (
     <>
@@ -29,12 +32,30 @@ const Input = ({
         <input
           id={inputId}
           placeholder={placeholder}
-          type={type}
+          type={
+            type == "password" ? (showPassword ? "text" : "password") : type
+          }
           name={name}
-          className={[classes.input, className].join(" ")}
+          className={[
+            classes.input,
+            className,
+            type == "password" ? classes.extraPadding : "",
+          ].join(" ")}
           required={required}
           onChange={onChange}
         />
+        {type == "password" && (
+          <button
+            type="button"
+            className={classes.showPassword}
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            <img
+              src={showPassword ? EyeImg : EyeClosedImg}
+              alt="reveal password"
+            />
+          </button>
+        )}
       </label>
     </>
   )
