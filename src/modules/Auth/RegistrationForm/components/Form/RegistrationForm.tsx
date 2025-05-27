@@ -1,17 +1,23 @@
 import Button from "@/components/Button/Button"
 import Input from "@/components/Input/Input"
+import { AuthService } from "@/modules/Auth/api/AuthService"
 import {
   initialState,
   registrationFormConfig,
 } from "@/modules/Auth/RegistrationForm/constants/formConfig"
 import { validateRegistrationForm } from "@/modules/Auth/RegistrationForm/helpers/registrationFormValidation"
 import type { RegistrationFormData } from "@/modules/Auth/RegistrationForm/types/types"
+import { useUserStore } from "@/modules/Auth/store/userStore"
+import { PRIVATE_ROUTES } from "@/router/routes"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import classes from "./RegistrationForm.module.scss"
 
 const RegistrationForm = () => {
   const [userFormData, setUserFormData] =
     useState<RegistrationFormData>(initialState)
+  const { setAuth } = useUserStore()
+  const navigate = useNavigate()
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
@@ -61,7 +67,28 @@ const RegistrationForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log(userFormData)
+
+    try {
+      await AuthService.register(
+        userFormData.email.value,
+        userFormData.password.value,
+        userFormData.username.value
+      )
+
+      const { access_token } = await AuthService.login(
+        userFormData.email.value,
+        userFormData.password.value
+      )
+      const user = await AuthService.fetchCurrentUser()
+      setAuth(user, access_token)
+      localStorage.setItem("access_token", access_token)
+      navigate(PRIVATE_ROUTES.ROOT_PATH)
+    } catch (err: any) {
+      console.error(
+        "Ошибка регистрации:",
+        err.response?.data?.detail || err.message
+      )
+    }
   }
 
   return (
