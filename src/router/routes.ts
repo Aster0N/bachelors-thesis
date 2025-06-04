@@ -9,5 +9,5 @@ export const PRIVATE_ROUTES: PrivateRoutes = {
 	PROFILE_PATH: "/profile",
   ORDERS_PATH: "/orders",
   ROUTES_PATH: "/routes",
-  ROUTE_DETAIL_PATH: "/route/:id",
+  ROUTE_DETAIL_PATH: "/routes/:id",
 }

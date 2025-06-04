@@ -4,7 +4,7 @@ type AvailableRoutes =
   | "/profile"
   | "/orders"
   | "/routes"
-  | "/route/:id"
+  | "/routes/:id"
 export type RouteNames =
   | "ROOT_PATH"
   | "AUTH_PATH"
