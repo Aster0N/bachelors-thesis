@@ -1,3 +1,4 @@
+import { AuthService } from "@/modules/Auth/AuthService"
 import { useUserStore } from "@/modules/Auth/store/userStore"
 import { privateRoutes, publicRoutes } from "@/router/index.ts"
 import { useEffect, useState } from "react"
@@ -5,16 +6,23 @@ import { Navigate, Route, Routes } from "react-router-dom"
 import { PRIVATE_ROUTES, PUBLIC_ROUTES } from "./routes"
 
 const AppRouter = () => {
-  const { accessToken } = useUserStore()
+  const { accessToken, setAuth, clearAuth } = useUserStore()
   const [isAuth, setIsAuth] = useState<boolean | null>(null)
 
-  useEffect(() => {
+  const checkAuth = async () => {
     const accessToken = localStorage.getItem("access_token")
     if (accessToken) {
+      const user = await AuthService.fetchCurrentUser()
       setIsAuth(true)
+      setAuth(user, accessToken)
     } else {
+      clearAuth()
       setIsAuth(false)
     }
+  }
+
+  useEffect(() => {
+    checkAuth()
   }, [accessToken])
 
   if (isAuth === null) {

@@ -12,7 +12,14 @@ const ProfilePage = () => {
     navigate("/auth")
   }
 
-  return <Button onClick={handleLogout}>Выйти</Button>
+  return (
+    <>
+      <p>
+        <b>{useUserStore.getState().user?.email}</b>
+      </p>
+      <Button onClick={handleLogout}>Выйти</Button>
+    </>
+  )
 }
 
 export default ProfilePage

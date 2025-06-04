@@ -1,3 +1,4 @@
+//import { api } from "@/api/api"
 import { FlightTaskPreview, OrdersPreview } from "@/types/typesDataPreview"
 import { FlightTask, Order } from "@/types/typesEntities"
 
@@ -5,6 +6,9 @@ export const fetchOrdersData = async () => {
   const data = await fetch("/test_data/orders.json")
     .then(data => data.json())
     .then(json => json.orders)
+
+  //? doesn't have privilege
+  // const { data } = await api.get<Order[]>("/orders/all")
 
   return data
 }
