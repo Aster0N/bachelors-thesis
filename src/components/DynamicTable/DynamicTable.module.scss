@@ -1,0 +1,44 @@
+@use "@/styles/fonts.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid $text-dark;
+  border-radius: $border-radius-m;
+  overflow: hidden;
+
+  th,
+  td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid $text-dark;
+    border-right: 1px solid $text-dark;
+  }
+
+  th p {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  td._small {
+    font-size: 0.875rem;
+    color: #333;
+  }
+
+  thead {
+    background-color: #f5f5f5;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  tr td:last-child,
+  tr th:last-child {
+    border-right: none;
+  }
+}

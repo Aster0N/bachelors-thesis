@@ -1,15 +1,43 @@
+import DynamicTable from "@/components/DynamicTable/DynamicTable"
+import { useEffect, useState } from "react"
+import {
+  fetchFlightTasksData,
+  fetchOrdersData,
+  getOrdersPreviewData,
+} from "./helpers"
+import { OrdersPreview } from "./types"
+
 const HomePage = () => {
+  const [ordersDataPreview, setOrdersDataPreview] = useState<OrdersPreview[]>()
+
+  const fetchData = async () => {
+    const ordersData = await fetchOrdersData()
+    const flightTasksData = await fetchFlightTasksData()
+
+    const ordersPreviewData: OrdersPreview[] = getOrdersPreviewData(ordersData)
+
+    setOrdersDataPreview(ordersPreviewData)
+  }
+
+  const columns: { key: keyof OrdersPreview; label: string }[] = [
+    { key: "date", label: "Дата" },
+    { key: "client", label: "Клиент" },
+    { key: "email", label: "Почта" },
+    { key: "status", label: "Статус" },
+  ]
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
   return (
     <div>
-      <h1>Title 1</h1>
-      <h2>Title 2</h2>
-      <h3>Title 3</h3>
-      <p>Simple text in a paragraph</p>
-      <big>Big text</big>
-      <p className="_huge">Huge text</p>
-      <p className="_small">Small text</p>
-      <p className="_caption">Caption</p>
-      <p className="_caption-bold">Caption bold</p>
+      <h2>Заявки</h2>
+      <div>
+        {ordersDataPreview && (
+          <DynamicTable columns={columns} data={ordersDataPreview} />
+        )}
+      </div>
     </div>
   )
 }

@@ -1,0 +1,164 @@
+{
+  "lenses": [
+    {
+      "id": "6fecd80b-87bd-4c01-9a4c-fda4fc1cde46",
+      "model": "DJI Zenmuse X5 15mm f/1.7",
+      "min_focal_length": 15,
+      "max_focal_length": 15,
+      "zoom_ratio": 1,
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+    },
+    {
+      "id": "f71df5dd-d37a-4dfe-95db-8abaa16a6645",
+      "model": "DJI DL 24mm f/2.8",
+      "min_focal_length": 24,
+      "max_focal_length": 24,
+      "zoom_ratio": 1,
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+    },
+    {
+      "id": "c9af7873-ccb4-4968-b5ac-363e72938e06",
+      "model": "Sony FE 16-35mm f/2.8 GM",
+      "min_focal_length": 16,
+      "max_focal_length": 35,
+      "zoom_ratio": 2.2,
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42"
+    },
+    {
+      "id": "9f6c2841-ef1c-438b-93af-36a52cc109d6",
+      "model": "Zeiss Batis 18mm f/2.8",
+      "min_focal_length": 18,
+      "max_focal_length": 18,
+      "zoom_ratio": 1,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "c525f10b-83e5-4757-bf08-b6016d1ec5b4",
+      "model": "Sony FE 24-70mm f/2.8 GM",
+      "min_focal_length": 24,
+      "max_focal_length": 70,
+      "zoom_ratio": 2.9,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "955bc2af-94d6-4028-9a50-6360bc52c6ef",
+      "model": "Laowa 9mm f/2.8 Zero-D",
+      "min_focal_length": 9,
+      "max_focal_length": 9,
+      "zoom_ratio": 1,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "8b0f7aaf-1759-42b0-8710-cc8b6bf164ac",
+      "model": "Leica DG 10-25mm f/1.7",
+      "min_focal_length": 10,
+      "max_focal_length": 25,
+      "zoom_ratio": 2.5,
+      "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec"
+    },
+    {
+      "id": "90f0b774-9e17-4f01-84cb-9b2ed0f79e58",
+      "model": "Canon CN-E 15.5-47mm",
+      "min_focal_length": 15.5,
+      "max_focal_length": 47,
+      "zoom_ratio": 3,
+      "club_id": "95b95bcf-c7d0-4b96-affa-4551b03ab824"
+    },
+    {
+      "id": "cb7a6bbf-0b39-4e83-a89f-4b215f941516",
+      "model": "Fujinon MK 18-55mm T2.9",
+      "min_focal_length": 18,
+      "max_focal_length": 55,
+      "zoom_ratio": 3.1,
+      "club_id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4"
+    },
+    {
+      "id": "b9c0d1e2-f3a4-2db6-c7d8-e9f0a1b2c3d4",
+      "model": "Panasonic Lumix G X Vario 12-35mm f/2.8 II",
+      "min_focal_length": 12,
+      "max_focal_length": 35,
+      "zoom_ratio": 2.9,
+      "club_id": "56ffef60-3aea-4256-b918-80477bc6ccb5"
+    },
+    {
+      "id": "c0d1e2f3-a4b5-3ec7-d8e9-f0a1b2c3d4e5",
+      "model": "DJI DL 18mm f/2.8",
+      "min_focal_length": 18,
+      "max_focal_length": 18,
+      "zoom_ratio": 1,
+      "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d"
+    },
+    {
+      "id": "d1e2f3a4-b5c6-4fd8-e9f0-a1b2c3d4e5f6",
+      "model": "Panasonic Lumix G X Vario 12-35mm f/2.8 II",
+      "min_focal_length": 12,
+      "max_focal_length": 35,
+      "zoom_ratio": 2.9,
+      "club_id": "707aa0ae-2e52-4ae1-8112-845695ecc5b8"
+    },
+    {
+      "id": "e2f3a4b5-c6d7-5ae9-f0a1-b2c3d4e5f6a7",
+      "model": "DJI DL 18mm f/2.8",
+      "min_focal_length": 18,
+      "max_focal_length": 18,
+      "zoom_ratio": 1,
+      "club_id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f"
+    },
+    {
+      "id": "f3a4b5c6-d7e8-6bf0-a1b2-c3d4e5f6a7b8",
+      "model": "Panasonic Lumix G X Vario 12-35mm f/2.8 II",
+      "min_focal_length": 12,
+      "max_focal_length": 35,
+      "zoom_ratio": 2.9,
+      "club_id": "8f5b7e32-73a0-4661-a00e-32b5ffd6cd18"
+    },
+    {
+      "id": "a4b5c6d7-e8f9-7ca1-b2c3-d4e5f6a7b8c9",
+      "model": "DJI DL 18mm f/2.8",
+      "min_focal_length": 18,
+      "max_focal_length": 18,
+      "zoom_ratio": 1,
+      "club_id": "c69d3a19-bff2-42d3-867b-68a21b99d8de"
+    },
+    {
+      "id": "b5c6d7e8-f9a0-8db2-c3d4-e5f6a7b8c9d0",
+      "model": "Panasonic Lumix G X Vario 12-35mm f/2.8 II",
+      "min_focal_length": 12,
+      "max_focal_length": 35,
+      "zoom_ratio": 2.9,
+      "club_id": "d7863827-450d-4af2-b4f8-fc9bff7842fd"
+    },
+    {
+      "id": "d7e8f9a0-b1c2-0fd4-e5f6-a7b8c9d0e1f2",
+      "model": "Sony FE 20mm f/1.8 G",
+      "min_focal_length": 20,
+      "max_focal_length": 20,
+      "zoom_ratio": 1,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "e8f9a0b1-c2d3-1ae5-f6a7-b8c9d0e1f2a3",
+      "model": "Panasonic Lumix G X Vario 12-35mm f/2.8 II",
+      "min_focal_length": 12,
+      "max_focal_length": 35,
+      "zoom_ratio": 2.9,
+      "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec"
+    },
+    {
+      "id": "c6d7e8f9-a0b1-9ec3-d4e5-f6a7b8c9d0e1",
+      "model": "Sony FE 28-70mm f/3.5-5.6 OSS",
+      "min_focal_length": 28,
+      "max_focal_length": 70,
+      "zoom_ratio": 2.5,
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42"
+    },
+    {
+      "id": "801accc3-42a6-403a-a761-e8db40679fad",
+      "model": "DJI Zenmuse X7 16mm",
+      "min_focal_length": 16,
+      "max_focal_length": 16,
+      "zoom_ratio": 1,
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+    }
+  ]
+}

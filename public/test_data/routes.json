@@ -1,0 +1,249 @@
+{
+  "routes": [
+    {
+      "id": "308301ac-fa99-433d-80e3-0aa109ad55fd",
+      "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.7588,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7588,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "id": "ab55bb1a-4a52-4dd3-aaa1-6580f7730b3f",
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.7589,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7589,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "id": "85fda8e2-aa55-4208-9482-acad1f34e467",
+      "club_id": "c69d3a19-bff2-42d3-867b-68a21b99d8de",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.7777,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7777,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "id": "7e903ac2-81a1-46f5-8d24-41c8cef8cead",
+      "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.7558,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7558,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "id": "9c37868c-4d09-490d-9455-8417e9dd9470",
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.756,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7561,
+          "longitude": 37.6176,
+          "altitude": 115.0,
+          "color": "yellow"
+        },
+        {
+          "sequence_number": 5,
+          "latitude": 55.756,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "id": "59339255-a1b4-4c16-97e8-42642836d898",
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.7551,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7551,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "id": "22e8bb05-6a49-44c1-9d9a-8d056d6c2108",
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.7555,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7555,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    }
+  ]
+}

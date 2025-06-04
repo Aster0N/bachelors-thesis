@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "6acfec08-8a1a-499d-9a8a-3d5bcc32ee38",
+      "email": "admin@example.com",
+      "username": "Admin",
+      "is_superuser": true
+    },
+    {
+      "id": "54647859-35b7-4fdf-a82c-a64a468bb48c",
+      "email": "user@example.com",
+      "username": "User",
+      "is_superuser": false
+    },
+    {
+      "id": "2aa0f4ff-536e-4ecd-b0b8-ffcca83cb363",
+      "email": "operator@example.com",
+      "username": "Operator",
+      "is_superuser": false
+    }
+  ]
+}

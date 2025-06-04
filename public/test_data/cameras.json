@@ -1,0 +1,228 @@
+{
+  "cameras": [
+    {
+      "id": "89ff5969-f11f-4a6a-85e7-2e41c766ba6b",
+      "model": "DJI Zenmuse X7",
+      "width_px": 6000,
+      "height_px": 4000,
+      "fps": 30,
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+    },
+    {
+      "id": "6a96e89c-f209-4d71-9236-75e4470dda42",
+      "model": "DJI Mavic 3 Enterprise",
+      "width_px": 5280,
+      "height_px": 3956,
+      "fps": 30,
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+    },
+    {
+      "id": "a7f2eebc-560f-48f7-a45f-ad81282a0760",
+      "model": "DJI Phantom 4 Pro V2.0",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 60,
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+    },
+    {
+      "id": "df0a60b1-56cc-4e17-9ce2-0c29a87c1030",
+      "model": "DJI Zenmuse X5S",
+      "width_px": 5280,
+      "height_px": 3956,
+      "fps": 30,
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42"
+    },
+    {
+      "id": "35425c73-a956-4214-939b-a9f512ed2868",
+      "model": "Sony α7R V",
+      "width_px": 9504,
+      "height_px": 6336,
+      "fps": 30,
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42"
+    },
+    {
+      "id": "052adfeb-1fc2-4ba4-a076-49d0997b0747",
+      "model": "DJI Zenmuse L1",
+      "width_px": 8192,
+      "height_px": 5460,
+      "fps": 10,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "413cf091-98f5-41bd-b812-280aa99f4c82",
+      "model": "Sony RX1R II",
+      "width_px": 7952,
+      "height_px": 5304,
+      "fps": 30,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "0d0f15c5-9c06-4bcd-9c75-9b0a9e2f8dac",
+      "model": "FLIR Duo Pro R",
+      "width_px": 640,
+      "height_px": 512,
+      "fps": 30,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "2c189983-1fbd-4419-af3b-a956dfd2fdcf",
+      "model": "PhaseOne iXM 100MP",
+      "width_px": 11608,
+      "height_px": 8708,
+      "fps": 3,
+      "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec"
+    },
+    {
+      "id": "cb5532da-74c1-4563-8bdf-05de2bb59f75",
+      "model": "Hasselblad A6D-100c",
+      "width_px": 11600,
+      "height_px": 8700,
+      "fps": 2,
+      "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec"
+    },
+    {
+      "id": "b1c2d3e4-f5a6-47b8-c9d0-e1f2a3b4c5d6",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "56ffef60-3aea-4256-b918-80477bc6ccb5"
+    },
+    {
+      "id": "c2d3e4f5-a6b7-58c9-d0e1-f2a3b4c5d6e7",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "56ffef60-3aea-4256-b918-80477bc6ccb5"
+    },
+    {
+      "id": "d3e4f5a6-b7c8-69d0-e1f2-a3b4c5d6e7f8",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d"
+    },
+    {
+      "id": "e4f5a6b7-c8d9-7ae1-f2a3-b4c5d6e7f8a9",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d"
+    },
+    {
+      "id": "f5a6b7c8-d9e0-8bf2-a3b4-c5d6e7f8a9b0",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "707aa0ae-2e52-4ae1-8112-845695ecc5b8"
+    },
+    {
+      "id": "a6b7c8d9-e0f1-9ca3-b4c5-d6e7f8a9b0c1",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "707aa0ae-2e52-4ae1-8112-845695ecc5b8"
+    },
+    {
+      "id": "b7c8d9e0-f1a2-0db4-c5d6-e7f8a9b0c1d2",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f"
+    },
+    {
+      "id": "c8d9e0f1-a2b3-1ec5-d6e7-f8a9b0c1d2e3",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f"
+    },
+    {
+      "id": "d9e0f1a2-b3c4-2fd6-e7f8-a9b0c1d2e3f4",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "8f5b7e32-73a0-4661-a00e-32b5ffd6cd18"
+    },
+    {
+      "id": "e0f1a2b3-c4d5-3ae7-f8a9-b0c1d2e3f4a5",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "8f5b7e32-73a0-4661-a00e-32b5ffd6cd18"
+    },
+    {
+      "id": "f1a2b3c4-d5e6-4bf8-a9b0-c1d2e3f4a5b6",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "95b95bcf-c7d0-4b96-affa-4551b03ab824"
+    },
+    {
+      "id": "a2b3c4d5-e6f7-5ca9-b0c1-d2e3f4a5b6c7",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "95b95bcf-c7d0-4b96-affa-4551b03ab824"
+    },
+    {
+      "id": "b3c4d5e6-f7a8-6db0-c1d2-e3f4a5b6c7d8",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4"
+    },
+    {
+      "id": "c4d5e6f7-a8b9-7ec1-d2e3-f4a5b6c7d8e9",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4"
+    },
+    {
+      "id": "d5e6f7a8-b9c0-8fd2-e3f4-a5b6c7d8e9f0",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "c69d3a19-bff2-42d3-867b-68a21b99d8de"
+    },
+    {
+      "id": "e6f7a8b9-c0d1-9ae3-f4a5-b6c7d8e9f0a1",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "c69d3a19-bff2-42d3-867b-68a21b99d8de"
+    },
+    {
+      "id": "f7a8b9c0-d1e2-0bf4-a5b6-c7d8e9f0a1b2",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "d7863827-450d-4af2-b4f8-fc9bff7842fd"
+    },
+    {
+      "id": "a8b9c0d1-e2f3-1ca5-b6c7-d8e9f0a1b2c3",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "d7863827-450d-4af2-b4f8-fc9bff7842fd"
+    }
+  ]
+}

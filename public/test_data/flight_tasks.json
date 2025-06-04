@@ -1,0 +1,245 @@
+{
+  "flight_tasks": [
+    {
+      "id": "78ee0cc2-9311-40ea-8ead-06e901932c2b",
+      "order": {
+        "id": "47ef1eb0-a1b7-4449-a639-ffa31dd0277b",
+        "first_name": "Анна",
+        "last_name": "Васильева",
+        "email": "anna.vasileva@yandex.ru",
+        "order_date": "2025-05-02",
+        "start_time": "13:00:00",
+        "end_time": "15:00:00",
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+        "status": "completed",
+        "club_name": "Центр пляжного спорта Динамо",
+        "club_address": "проспект Динамо, 44Б"
+      },
+      "operator": {
+        "id": "6acfec08-8a1a-499d-9a8a-3d5bcc32ee38",
+        "email": "admin@example.com",
+        "username": "Admin",
+        "is_superuser": true
+      },
+      "route": {
+        "id": "9c37868c-4d09-490d-9455-8417e9dd9470",
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+        "points": [
+          {
+            "sequence_number": 1,
+            "latitude": 55.756,
+            "longitude": 37.6173,
+            "altitude": 100.0,
+            "color": "red"
+          },
+          {
+            "sequence_number": 2,
+            "latitude": 55.756,
+            "longitude": 37.6175,
+            "altitude": 120.0,
+            "color": "blue"
+          },
+          {
+            "sequence_number": 3,
+            "latitude": 55.7562,
+            "longitude": 37.6177,
+            "altitude": 110.0,
+            "color": "green"
+          },
+          {
+            "sequence_number": 4,
+            "latitude": 55.7561,
+            "longitude": 37.6176,
+            "altitude": 115.0,
+            "color": "yellow"
+          },
+          {
+            "sequence_number": 5,
+            "latitude": 55.756,
+            "longitude": 37.6173,
+            "altitude": 100.0,
+            "color": "red"
+          }
+        ]
+      },
+      "drone": {
+        "id": "b14d35e3-2959-4231-bb4c-5b5e23b601c7",
+        "model": "DJI Matrice 210 RTK",
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+        "battery_charge": 88
+      },
+      "camera": {
+        "id": "052adfeb-1fc2-4ba4-a076-49d0997b0747",
+        "model": "DJI Zenmuse L1",
+        "width_px": 8192,
+        "height_px": 5460,
+        "fps": 10,
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+      },
+      "lens": {
+        "id": "9f6c2841-ef1c-438b-93af-36a52cc109d6",
+        "model": "Zeiss Batis 18mm f/2.8",
+        "min_focal_length": 18,
+        "max_focal_length": 18,
+        "zoom_ratio": 1,
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+      }
+    },
+    {
+      "id": "45592f6a-31d7-45b0-b30b-3ff3221ae478",
+      "order": {
+        "id": "ff0d8a8f-2c3d-4451-8237-4fbbd8251063",
+        "first_name": "Андрей",
+        "last_name": "Морозов",
+        "email": "a.morozov@mail.com",
+        "order_date": "2025-05-02",
+        "start_time": "09:30:00",
+        "end_time": "11:30:00",
+        "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+        "status": "completed",
+        "club_name": "Теннисный клуб Fresh Fitness",
+        "club_address": "Выборгское ш., 6"
+      },
+      "operator": {
+        "id": "6acfec08-8a1a-499d-9a8a-3d5bcc32ee38",
+        "email": "admin@example.com",
+        "username": "Admin",
+        "is_superuser": true
+      },
+      "route": {
+        "id": "7e903ac2-81a1-46f5-8d24-41c8cef8cead",
+        "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+        "points": [
+          {
+            "sequence_number": 1,
+            "latitude": 55.7558,
+            "longitude": 37.6173,
+            "altitude": 100.0,
+            "color": "red"
+          },
+          {
+            "sequence_number": 2,
+            "latitude": 55.756,
+            "longitude": 37.6175,
+            "altitude": 120.0,
+            "color": "blue"
+          },
+          {
+            "sequence_number": 3,
+            "latitude": 55.7562,
+            "longitude": 37.6177,
+            "altitude": 110.0,
+            "color": "green"
+          },
+          {
+            "sequence_number": 4,
+            "latitude": 55.7558,
+            "longitude": 37.6173,
+            "altitude": 100.0,
+            "color": "red"
+          }
+        ]
+      },
+      "drone": {
+        "id": "4eaf037b-3396-45e6-a645-b87c5b8582be",
+        "model": "DJI Air 2S",
+        "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+        "battery_charge": 91
+      },
+      "camera": {
+        "id": "a7f2eebc-560f-48f7-a45f-ad81282a0760",
+        "model": "DJI Phantom 4 Pro V2.0",
+        "width_px": 5472,
+        "height_px": 3648,
+        "fps": 60,
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+      },
+      "lens": {
+        "id": "f71df5dd-d37a-4dfe-95db-8abaa16a6645",
+        "model": "DJI DL 24mm f/2.8",
+        "min_focal_length": 24,
+        "max_focal_length": 24,
+        "zoom_ratio": 1,
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+      }
+    },
+    {
+      "id": "71fe1184-2407-40e9-bee2-2308fbab879e",
+      "order": {
+        "id": "ef752b10-5020-4577-ad92-4df85adb61d6",
+        "first_name": "Алёна",
+        "last_name": "Смирнова",
+        "email": "elena.smirnova@gmail.com",
+        "order_date": "2025-05-01",
+        "start_time": "15:00:00",
+        "end_time": "16:00:00",
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+        "status": "completed",
+        "club_name": "Клуб пляжного волейбола Rio",
+        "club_address": "Елагин остров"
+      },
+      "operator": {
+        "id": "54647859-35b7-4fdf-a82c-a64a468bb48c",
+        "email": "user@example.com",
+        "username": "User",
+        "is_superuser": false
+      },
+      "route": {
+        "id": "59339255-a1b4-4c16-97e8-42642836d898",
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+        "points": [
+          {
+            "sequence_number": 1,
+            "latitude": 55.7551,
+            "longitude": 37.6173,
+            "altitude": 100.0,
+            "color": "red"
+          },
+          {
+            "sequence_number": 2,
+            "latitude": 55.756,
+            "longitude": 37.6175,
+            "altitude": 120.0,
+            "color": "blue"
+          },
+          {
+            "sequence_number": 3,
+            "latitude": 55.7562,
+            "longitude": 37.6177,
+            "altitude": 110.0,
+            "color": "green"
+          },
+          {
+            "sequence_number": 4,
+            "latitude": 55.7551,
+            "longitude": 37.6173,
+            "altitude": 100.0,
+            "color": "red"
+          }
+        ]
+      },
+      "drone": {
+        "id": "46c38422-2719-4c94-addc-8dfb68027721",
+        "model": "DJI Mavic 3 Enterprise",
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+        "battery_charge": 90
+      },
+      "camera": {
+        "id": "6a96e89c-f209-4d71-9236-75e4470dda42",
+        "model": "DJI Mavic 3 Enterprise",
+        "width_px": 5280,
+        "height_px": 3956,
+        "fps": 30,
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+      },
+      "lens": {
+        "id": "6fecd80b-87bd-4c01-9a4c-fda4fc1cde46",
+        "model": "DJI Zenmuse X5 15mm f/1.7",
+        "min_focal_length": 15,
+        "max_focal_length": 15,
+        "zoom_ratio": 1,
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+      }
+    }
+  ]
+}
