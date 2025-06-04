@@ -61,9 +61,9 @@ const LoginForm = () => {
         userFormData.email.value,
         userFormData.password.value
       )
+      localStorage.setItem("access_token", access_token)
       const user = await AuthService.fetchCurrentUser()
       setAuth(user, access_token)
-      localStorage.setItem("access_token", access_token)
       navigate(PRIVATE_ROUTES.ROOT_PATH)
     } catch (err: any) {
       console.error(

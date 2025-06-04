@@ -2,8 +2,10 @@ import axios, { AxiosError } from "axios"
 
 import { useUserStore } from "../store/userStore"
 
+const URL = "http://localhost:8000"
+//const URL = "http://91.238.230.96"
 const api = axios.create({
-  baseURL: "http://91.238.230.96/",
+  baseURL: URL,
   withCredentials: true,
 })
 
@@ -27,9 +29,11 @@ api.interceptors.response.use(
       !originalRequest._retry
     ) {
       originalRequest._retry = true
+      // localStorage.removeItem("access_token")
+      // console.error("Время жизни токена закончилось")
       try {
         const { data } = await axios.post(
-          "http://91.238.230.96/login/refresh-token",
+          `${URL}/login/refresh-token`,
           {},
           { withCredentials: true }
         )
@@ -37,13 +41,14 @@ api.interceptors.response.use(
         useUserStore
           .getState()
           .setAuth(useUserStore.getState().user!, access_token)
+
         localStorage.setItem("access_token", access_token)
         originalRequest.headers.Authorization = `Bearer ${access_token}`
         return api(originalRequest)
       } catch (refreshError) {
         useUserStore.getState().clearAuth()
         localStorage.removeItem("access_token")
-        window.location.href = "/auth"
+        // ! window.location.href = "/auth"
         return Promise.reject(refreshError)
       }
     }
