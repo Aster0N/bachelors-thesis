@@ -1,6 +1,8 @@
 import DynamicTable from "@/components/DynamicTable/DynamicTable"
 import FlightTaskCard from "@/components/FlightTaskCard/FlightTaskCard"
+import { PRIVATE_ROUTES } from "@/router/routes"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import { FlightTaskPreview, OrdersPreview } from "../../types/typesDataPreview"
 import {
   fetchFlightTasksData,
@@ -43,16 +45,23 @@ const HomePage = () => {
       <h2>Заявки</h2>
       <div>
         {ordersDataPreview && (
-          <DynamicTable columns={columns} data={ordersDataPreview} />
+          <>
+            <DynamicTable columns={columns} data={ordersDataPreview} />
+            <Link to={PRIVATE_ROUTES.ORDERS_PATH}>смотреть все...</Link>
+          </>
         )}
       </div>
       <h2>Маршруты</h2>
-      <div className={classes.flightTaskPreview}>
-        {flightTasksDataPreview &&
-          flightTasksDataPreview.map(task => (
-            <FlightTaskCard key={task.id} {...task} />
-          ))}
-      </div>
+      {flightTasksDataPreview && (
+        <>
+          <div className={classes.flightTaskPreview}>
+            {flightTasksDataPreview.map(task => (
+              <FlightTaskCard key={task.id} {...task} />
+            ))}
+          </div>
+          <Link to={PRIVATE_ROUTES.ROUTES_PATH}>смотреть все...</Link>
+        </>
+      )}
     </div>
   )
 }

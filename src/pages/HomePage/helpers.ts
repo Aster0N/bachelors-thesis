@@ -22,20 +22,24 @@ export const fetchFlightTasksData = async () => {
 }
 
 export const getOrdersPreviewData = (orders: Order[]): OrdersPreview[] => {
-  return orders.map((item: Order) => ({
-    date: item.order_date,
-    client: `${item.first_name} ${item.last_name}`,
-    email: item.email,
-    status: item.status,
-  }))
+  return orders
+    .map((item: Order) => ({
+      date: item.order_date,
+      client: `${item.first_name} ${item.last_name}`,
+      email: item.email,
+      status: item.status,
+    }))
+    .slice(0, 5)
 }
 
 export const getFlightTasksPreviewData = (
   flightTasks: FlightTask[]
 ): FlightTaskPreview[] => {
-  return flightTasks.map((item: FlightTask) => ({
-    id: item.id,
-    date: item.order.order_date,
-    status: item.order.status,
-  }))
+  return flightTasks
+    .map((item: FlightTask) => ({
+      id: item.id,
+      date: item.order.order_date,
+      status: item.order.status,
+    }))
+    .slice(0, 2)
 }
