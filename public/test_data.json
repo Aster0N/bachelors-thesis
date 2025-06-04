@@ -1,0 +1,1334 @@
+{
+  "users": [
+    {
+      "id": "6acfec08-8a1a-499d-9a8a-3d5bcc32ee38",
+      "email": "admin@example.com",
+      "username": "Admin",
+      "is_superuser": true
+    },
+    {
+      "id": "54647859-35b7-4fdf-a82c-a64a468bb48c",
+      "email": "user@example.com",
+      "username": "User",
+      "is_superuser": false
+    },
+    {
+      "id": "2aa0f4ff-536e-4ecd-b0b8-ffcca83cb363",
+      "email": "operator@example.com",
+      "username": "Operator",
+      "is_superuser": false
+    }
+  ],
+  "clubs": [
+    {
+      "id": "88a5c3f4-055c-4d6d-84eb-93e255504eec",
+      "name": "Теннисный клуб Елагин Остров",
+      "address": "Елагин остров, 4Е",
+      "latitude": 59.98206,
+      "longitude": 30.263436
+    },
+    {
+      "id": "c69d3a19-bff2-42d3-867b-68a21b99d8de",
+      "name": "Футбольный стадион Химик",
+      "address": "Рябовское ш., 9",
+      "latitude": 59.962933,
+      "longitude": 30.494927
+    },
+    {
+      "id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42",
+      "name": "Ледовый каток Богатырь",
+      "address": "Гаккелевская ул., 25, корп. 2Б",
+      "latitude": 60.00138,
+      "longitude": 30.258843
+    },
+    {
+      "id": "95b95bcf-c7d0-4b96-affa-4551b03ab824",
+      "name": "Яхт-клуб PROyachting",
+      "address": "просп. Крузенштерна, 18соор9",
+      "latitude": 59.953751,
+      "longitude": 30.18382
+    },
+    {
+      "id": "56ffef60-3aea-4256-b918-80477bc6ccb5",
+      "name": "Спортивный комплекс Хоккейный город СКА",
+      "address": "Российский просп., 6",
+      "latitude": 59.922895,
+      "longitude": 30.470232
+    },
+    {
+      "id": "707aa0ae-2e52-4ae1-8112-845695ecc5b8",
+      "name": "Теннисный клуб Глория",
+      "address": "Московский парк Победы",
+      "latitude": 59.870958,
+      "longitude": 30.33567
+    },
+    {
+      "id": "8f5b7e32-73a0-4661-a00e-32b5ffd6cd18",
+      "name": "Спортивный клуб Сосновка парк",
+      "address": "улица Жака Дюкло, 22П",
+      "latitude": 60.02539,
+      "longitude": 30.336178
+    },
+    {
+      "id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f",
+      "name": "Теннисный клуб Корты Парка Екатерингоф",
+      "address": "Лифляндская улица, 12Г",
+      "latitude": 59.903114,
+      "longitude": 30.262184
+    },
+    {
+      "id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4",
+      "name": "Яхт-клуб Сила ветра",
+      "address": "Петровская коса, 9К",
+      "latitude": 59.964926,
+      "longitude": 30.239435
+    },
+    {
+      "id": "d7863827-450d-4af2-b4f8-fc9bff7842fd",
+      "name": "Петербургский теннисный клуб имени В.И. Никифорова",
+      "address": "наб. Мартынова, 38",
+      "latitude": 59.974301,
+      "longitude": 30.254173
+    },
+    {
+      "id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+      "name": "Центр пляжного спорта Динамо",
+      "address": "проспект Динамо, 44Б",
+      "latitude": 59.966278,
+      "longitude": 30.267708
+    },
+    {
+      "id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+      "name": "Теннисный клуб Fresh Fitness",
+      "address": "Выборгское ш., 6",
+      "latitude": 60.034737,
+      "longitude": 30.318492
+    },
+    {
+      "id": "1d13c146-5801-4100-a254-af87f750fde6",
+      "name": "Клуб пляжного волейбола Rio",
+      "address": "Елагин остров",
+      "latitude": 59.979223,
+      "longitude": 30.24542
+    }
+  ],
+  "drones": [
+    {
+      "id": "5b92341a-b59e-4656-b220-ea95a71d0ae6",
+      "model": "DJI Matrice 300 RTK",
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+      "battery_charge": 95
+    },
+    {
+      "id": "01071116-a243-4948-a71e-3da3f478db7b",
+      "model": "DJI Phantom 4 RTK",
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+      "battery_charge": 61
+    },
+    {
+      "id": "46c38422-2719-4c94-addc-8dfb68027721",
+      "model": "DJI Mavic 3 Enterprise",
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+      "battery_charge": 90
+    },
+    {
+      "id": "5c271ca6-f1ce-465f-a7e9-3965d1ee962e",
+      "model": "DJI Inspire 2",
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42",
+      "battery_charge": 92
+    },
+    {
+      "id": "b8d8a331-2096-4941-95eb-bbc2c558a1bc",
+      "model": "FreeFly Alta X",
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42",
+      "battery_charge": 65
+    },
+    {
+      "id": "b14d35e3-2959-4231-bb4c-5b5e23b601c7",
+      "model": "DJI Matrice 210 RTK",
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+      "battery_charge": 88
+    },
+    {
+      "id": "3497c608-141e-4f09-a274-78f6f49282fb",
+      "model": "Autel Robotics EVO II",
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+      "battery_charge": 95
+    },
+    {
+      "id": "1f4b4ca7-5155-48b8-81f4-d3045856daf1",
+      "model": "DJI Agras T40",
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+      "battery_charge": 70
+    },
+    {
+      "id": "cc31e9f8-3bb2-4ae1-b922-2cc3066a6f92",
+      "model": "DJI Mavic 3 Cine",
+      "club_id": "56ffef60-3aea-4256-b918-80477bc6ccb5",
+      "battery_charge": 82
+    },
+    {
+      "id": "99f47701-b38c-477d-a12e-9606a9761505",
+      "model": "Parrot Anafi USA",
+      "club_id": "56ffef60-3aea-4256-b918-80477bc6ccb5",
+      "battery_charge": 75
+    },
+    {
+      "id": "4eaf037b-3396-45e6-a645-b87c5b8582be",
+      "model": "DJI Air 2S",
+      "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+      "battery_charge": 91
+    },
+    {
+      "id": "e6b9c8aa-74eb-4a52-9fd3-fb5676857603",
+      "model": "DJI Mini 3 Pro",
+      "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+      "battery_charge": 98
+    },
+    {
+      "id": "68b12295-cb7d-4062-9ab0-23bb8bbf23fa",
+      "model": "Skydio 2+",
+      "club_id": "707aa0ae-2e52-4ae1-8112-845695ecc5b8",
+      "battery_charge": 85
+    },
+    {
+      "id": "a8923a06-156c-4108-95e7-a4b1d554016b",
+      "model": "DJI Avata",
+      "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec",
+      "battery_charge": 92
+    },
+    {
+      "id": "2ccda96b-4647-40c7-a0b7-8a0f574294ca",
+      "model": "Autel Robotics Dragonfish",
+      "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec",
+      "battery_charge": 70
+    },
+    {
+      "id": "e740cf46-d490-4676-b8f8-018ac3ae0c60",
+      "model": "DJI Mavic 2 Enterprise",
+      "club_id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f",
+      "battery_charge": 88
+    },
+    {
+      "id": "f739cc4f-5fdd-48bd-a3ac-b353b3719f76",
+      "model": "Yuneec H520",
+      "club_id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f",
+      "battery_charge": 65
+    },
+    {
+      "id": "67daf755-8136-4eb6-86a9-962331ef12cf",
+      "model": "DJI Inspire 3",
+      "club_id": "8f5b7e32-73a0-4661-a00e-32b5ffd6cd18",
+      "battery_charge": 95
+    },
+    {
+      "id": "50736638-283b-4aaa-b0ad-24086c0361f3",
+      "model": "Walkera Voyager 5",
+      "club_id": "8f5b7e32-73a0-4661-a00e-32b5ffd6cd18",
+      "battery_charge": 60
+    },
+    {
+      "id": "9e183b7c-981a-4cad-a611-4ff860436425",
+      "model": "DJI Mavic 3 Thermal",
+      "club_id": "95b95bcf-c7d0-4b96-affa-4551b03ab824",
+      "battery_charge": 90
+    },
+    {
+      "id": "150ccc58-88ef-4226-b265-bb1ace1b4e4f",
+      "model": "Parrot Disco",
+      "club_id": "95b95bcf-c7d0-4b96-affa-4551b03ab824",
+      "battery_charge": 55
+    },
+    {
+      "id": "f43f4d8a-f248-4987-8783-202ecd1e0e1e",
+      "model": "DJI Matrice 30",
+      "club_id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4",
+      "battery_charge": 85
+    },
+    {
+      "id": "a206d1d4-a1d1-48c1-81af-71e98804a445",
+      "model": "WingtraOne GEN II",
+      "club_id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4",
+      "battery_charge": 75
+    },
+    {
+      "id": "ca15632a-e2ab-4da7-b8b1-b3ce258eeede",
+      "model": "DJI Agras T20P",
+      "club_id": "c69d3a19-bff2-42d3-867b-68a21b99d8de",
+      "battery_charge": 80
+    },
+    {
+      "id": "613544d7-9286-4cec-987b-9b9a89a964cc",
+      "model": "DJI Mini 4 Pro",
+      "club_id": "c69d3a19-bff2-42d3-867b-68a21b99d8de",
+      "battery_charge": 97
+    },
+    {
+      "id": "f77fbf32-dc99-4219-854f-d9f4ddcb4619",
+      "model": "DJI Mavic 2 Pro",
+      "club_id": "d7863827-450d-4af2-b4f8-fc9bff7842fd",
+      "battery_charge": 93
+    },
+    {
+      "id": "6502b19e-3395-4640-9b4d-3d481125bbdd",
+      "model": "DJI Mavic 3 Classic",
+      "club_id": "d7863827-450d-4af2-b4f8-fc9bff7842fd",
+      "battery_charge": 89
+    },
+    {
+      "id": "247bb7c5-f34b-429b-9d4e-7287b4778c38",
+      "model": "DJI FPV",
+      "club_id": "707aa0ae-2e52-4ae1-8112-845695ecc5b8",
+      "battery_charge": 60
+    }
+  ],
+  "cameras": [
+    {
+      "id": "89ff5969-f11f-4a6a-85e7-2e41c766ba6b",
+      "model": "DJI Zenmuse X7",
+      "width_px": 6000,
+      "height_px": 4000,
+      "fps": 30,
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+    },
+    {
+      "id": "6a96e89c-f209-4d71-9236-75e4470dda42",
+      "model": "DJI Mavic 3 Enterprise",
+      "width_px": 5280,
+      "height_px": 3956,
+      "fps": 30,
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+    },
+    {
+      "id": "a7f2eebc-560f-48f7-a45f-ad81282a0760",
+      "model": "DJI Phantom 4 Pro V2.0",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 60,
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+    },
+    {
+      "id": "df0a60b1-56cc-4e17-9ce2-0c29a87c1030",
+      "model": "DJI Zenmuse X5S",
+      "width_px": 5280,
+      "height_px": 3956,
+      "fps": 30,
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42"
+    },
+    {
+      "id": "35425c73-a956-4214-939b-a9f512ed2868",
+      "model": "Sony α7R V",
+      "width_px": 9504,
+      "height_px": 6336,
+      "fps": 30,
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42"
+    },
+    {
+      "id": "052adfeb-1fc2-4ba4-a076-49d0997b0747",
+      "model": "DJI Zenmuse L1",
+      "width_px": 8192,
+      "height_px": 5460,
+      "fps": 10,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "413cf091-98f5-41bd-b812-280aa99f4c82",
+      "model": "Sony RX1R II",
+      "width_px": 7952,
+      "height_px": 5304,
+      "fps": 30,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "0d0f15c5-9c06-4bcd-9c75-9b0a9e2f8dac",
+      "model": "FLIR Duo Pro R",
+      "width_px": 640,
+      "height_px": 512,
+      "fps": 30,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "2c189983-1fbd-4419-af3b-a956dfd2fdcf",
+      "model": "PhaseOne iXM 100MP",
+      "width_px": 11608,
+      "height_px": 8708,
+      "fps": 3,
+      "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec"
+    },
+    {
+      "id": "cb5532da-74c1-4563-8bdf-05de2bb59f75",
+      "model": "Hasselblad A6D-100c",
+      "width_px": 11600,
+      "height_px": 8700,
+      "fps": 2,
+      "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec"
+    },
+    {
+      "id": "b1c2d3e4-f5a6-47b8-c9d0-e1f2a3b4c5d6",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "56ffef60-3aea-4256-b918-80477bc6ccb5"
+    },
+    {
+      "id": "c2d3e4f5-a6b7-58c9-d0e1-f2a3b4c5d6e7",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "56ffef60-3aea-4256-b918-80477bc6ccb5"
+    },
+    {
+      "id": "d3e4f5a6-b7c8-69d0-e1f2-a3b4c5d6e7f8",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d"
+    },
+    {
+      "id": "e4f5a6b7-c8d9-7ae1-f2a3-b4c5d6e7f8a9",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d"
+    },
+    {
+      "id": "f5a6b7c8-d9e0-8bf2-a3b4-c5d6e7f8a9b0",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "707aa0ae-2e52-4ae1-8112-845695ecc5b8"
+    },
+    {
+      "id": "a6b7c8d9-e0f1-9ca3-b4c5-d6e7f8a9b0c1",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "707aa0ae-2e52-4ae1-8112-845695ecc5b8"
+    },
+    {
+      "id": "b7c8d9e0-f1a2-0db4-c5d6-e7f8a9b0c1d2",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f"
+    },
+    {
+      "id": "c8d9e0f1-a2b3-1ec5-d6e7-f8a9b0c1d2e3",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f"
+    },
+    {
+      "id": "d9e0f1a2-b3c4-2fd6-e7f8-a9b0c1d2e3f4",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "8f5b7e32-73a0-4661-a00e-32b5ffd6cd18"
+    },
+    {
+      "id": "e0f1a2b3-c4d5-3ae7-f8a9-b0c1d2e3f4a5",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "8f5b7e32-73a0-4661-a00e-32b5ffd6cd18"
+    },
+    {
+      "id": "f1a2b3c4-d5e6-4bf8-a9b0-c1d2e3f4a5b6",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "95b95bcf-c7d0-4b96-affa-4551b03ab824"
+    },
+    {
+      "id": "a2b3c4d5-e6f7-5ca9-b0c1-d2e3f4a5b6c7",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "95b95bcf-c7d0-4b96-affa-4551b03ab824"
+    },
+    {
+      "id": "b3c4d5e6-f7a8-6db0-c1d2-e3f4a5b6c7d8",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4"
+    },
+    {
+      "id": "c4d5e6f7-a8b9-7ec1-d2e3-f4a5b6c7d8e9",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4"
+    },
+    {
+      "id": "d5e6f7a8-b9c0-8fd2-e3f4-a5b6c7d8e9f0",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "c69d3a19-bff2-42d3-867b-68a21b99d8de"
+    },
+    {
+      "id": "e6f7a8b9-c0d1-9ae3-f4a5-b6c7d8e9f0a1",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "c69d3a19-bff2-42d3-867b-68a21b99d8de"
+    },
+    {
+      "id": "f7a8b9c0-d1e2-0bf4-a5b6-c7d8e9f0a1b2",
+      "model": "DJI Zenmuse X9-8K",
+      "width_px": 8192,
+      "height_px": 4320,
+      "fps": 75,
+      "club_id": "d7863827-450d-4af2-b4f8-fc9bff7842fd"
+    },
+    {
+      "id": "a8b9c0d1-e2f3-1ca5-b6c7-d8e9f0a1b2c3",
+      "model": "Autel EVO Nano+ Camera",
+      "width_px": 5472,
+      "height_px": 3648,
+      "fps": 30,
+      "club_id": "d7863827-450d-4af2-b4f8-fc9bff7842fd"
+    }
+  ],
+  "lenses": [
+    {
+      "id": "6fecd80b-87bd-4c01-9a4c-fda4fc1cde46",
+      "model": "DJI Zenmuse X5 15mm f/1.7",
+      "min_focal_length": 15,
+      "max_focal_length": 15,
+      "zoom_ratio": 1,
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+    },
+    {
+      "id": "f71df5dd-d37a-4dfe-95db-8abaa16a6645",
+      "model": "DJI DL 24mm f/2.8",
+      "min_focal_length": 24,
+      "max_focal_length": 24,
+      "zoom_ratio": 1,
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+    },
+    {
+      "id": "c9af7873-ccb4-4968-b5ac-363e72938e06",
+      "model": "Sony FE 16-35mm f/2.8 GM",
+      "min_focal_length": 16,
+      "max_focal_length": 35,
+      "zoom_ratio": 2.2,
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42"
+    },
+    {
+      "id": "9f6c2841-ef1c-438b-93af-36a52cc109d6",
+      "model": "Zeiss Batis 18mm f/2.8",
+      "min_focal_length": 18,
+      "max_focal_length": 18,
+      "zoom_ratio": 1,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "c525f10b-83e5-4757-bf08-b6016d1ec5b4",
+      "model": "Sony FE 24-70mm f/2.8 GM",
+      "min_focal_length": 24,
+      "max_focal_length": 70,
+      "zoom_ratio": 2.9,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "955bc2af-94d6-4028-9a50-6360bc52c6ef",
+      "model": "Laowa 9mm f/2.8 Zero-D",
+      "min_focal_length": 9,
+      "max_focal_length": 9,
+      "zoom_ratio": 1,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "8b0f7aaf-1759-42b0-8710-cc8b6bf164ac",
+      "model": "Leica DG 10-25mm f/1.7",
+      "min_focal_length": 10,
+      "max_focal_length": 25,
+      "zoom_ratio": 2.5,
+      "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec"
+    },
+    {
+      "id": "90f0b774-9e17-4f01-84cb-9b2ed0f79e58",
+      "model": "Canon CN-E 15.5-47mm",
+      "min_focal_length": 15.5,
+      "max_focal_length": 47,
+      "zoom_ratio": 3,
+      "club_id": "95b95bcf-c7d0-4b96-affa-4551b03ab824"
+    },
+    {
+      "id": "cb7a6bbf-0b39-4e83-a89f-4b215f941516",
+      "model": "Fujinon MK 18-55mm T2.9",
+      "min_focal_length": 18,
+      "max_focal_length": 55,
+      "zoom_ratio": 3.1,
+      "club_id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4"
+    },
+    {
+      "id": "b9c0d1e2-f3a4-2db6-c7d8-e9f0a1b2c3d4",
+      "model": "Panasonic Lumix G X Vario 12-35mm f/2.8 II",
+      "min_focal_length": 12,
+      "max_focal_length": 35,
+      "zoom_ratio": 2.9,
+      "club_id": "56ffef60-3aea-4256-b918-80477bc6ccb5"
+    },
+    {
+      "id": "c0d1e2f3-a4b5-3ec7-d8e9-f0a1b2c3d4e5",
+      "model": "DJI DL 18mm f/2.8",
+      "min_focal_length": 18,
+      "max_focal_length": 18,
+      "zoom_ratio": 1,
+      "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d"
+    },
+    {
+      "id": "d1e2f3a4-b5c6-4fd8-e9f0-a1b2c3d4e5f6",
+      "model": "Panasonic Lumix G X Vario 12-35mm f/2.8 II",
+      "min_focal_length": 12,
+      "max_focal_length": 35,
+      "zoom_ratio": 2.9,
+      "club_id": "707aa0ae-2e52-4ae1-8112-845695ecc5b8"
+    },
+    {
+      "id": "e2f3a4b5-c6d7-5ae9-f0a1-b2c3d4e5f6a7",
+      "model": "DJI DL 18mm f/2.8",
+      "min_focal_length": 18,
+      "max_focal_length": 18,
+      "zoom_ratio": 1,
+      "club_id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f"
+    },
+    {
+      "id": "f3a4b5c6-d7e8-6bf0-a1b2-c3d4e5f6a7b8",
+      "model": "Panasonic Lumix G X Vario 12-35mm f/2.8 II",
+      "min_focal_length": 12,
+      "max_focal_length": 35,
+      "zoom_ratio": 2.9,
+      "club_id": "8f5b7e32-73a0-4661-a00e-32b5ffd6cd18"
+    },
+    {
+      "id": "a4b5c6d7-e8f9-7ca1-b2c3-d4e5f6a7b8c9",
+      "model": "DJI DL 18mm f/2.8",
+      "min_focal_length": 18,
+      "max_focal_length": 18,
+      "zoom_ratio": 1,
+      "club_id": "c69d3a19-bff2-42d3-867b-68a21b99d8de"
+    },
+    {
+      "id": "b5c6d7e8-f9a0-8db2-c3d4-e5f6a7b8c9d0",
+      "model": "Panasonic Lumix G X Vario 12-35mm f/2.8 II",
+      "min_focal_length": 12,
+      "max_focal_length": 35,
+      "zoom_ratio": 2.9,
+      "club_id": "d7863827-450d-4af2-b4f8-fc9bff7842fd"
+    },
+    {
+      "id": "d7e8f9a0-b1c2-0fd4-e5f6-a7b8c9d0e1f2",
+      "model": "Sony FE 20mm f/1.8 G",
+      "min_focal_length": 20,
+      "max_focal_length": 20,
+      "zoom_ratio": 1,
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+    },
+    {
+      "id": "e8f9a0b1-c2d3-1ae5-f6a7-b8c9d0e1f2a3",
+      "model": "Panasonic Lumix G X Vario 12-35mm f/2.8 II",
+      "min_focal_length": 12,
+      "max_focal_length": 35,
+      "zoom_ratio": 2.9,
+      "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec"
+    },
+    {
+      "id": "c6d7e8f9-a0b1-9ec3-d4e5-f6a7b8c9d0e1",
+      "model": "Sony FE 28-70mm f/3.5-5.6 OSS",
+      "min_focal_length": 28,
+      "max_focal_length": 70,
+      "zoom_ratio": 2.5,
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42"
+    },
+    {
+      "id": "801accc3-42a6-403a-a761-e8db40679fad",
+      "model": "DJI Zenmuse X7 16mm",
+      "min_focal_length": 16,
+      "max_focal_length": 16,
+      "zoom_ratio": 1,
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+    }
+  ],
+  "orders": [
+    {
+      "id": "6b2f926d-25aa-4f9b-820b-1366afda616b",
+      "first_name": "Артём",
+      "last_name": "Никитин",
+      "email": "artem.nikitin@gmail.com",
+      "order_date": "2025-07-25",
+      "start_time": "11:00:00",
+      "end_time": "13:00:00",
+      "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec",
+      "status": "in_processing",
+      "club_name": "Теннисный клуб Елагин Остров",
+      "club_address": "Елагин остров, 4Е"
+    },
+    {
+      "id": "8c1e9491-fa82-4d3c-95c7-24a3ce0c4323",
+      "first_name": "Иван",
+      "last_name": "Петров",
+      "email": "ivan.petrov@mail.com",
+      "order_date": "2025-06-15",
+      "start_time": "10:00:00",
+      "end_time": "12:00:00",
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+      "status": "new",
+      "club_name": "Клуб пляжного волейбола Rio",
+      "club_address": "Елагин остров"
+    },
+    {
+      "id": "b6aa52e1-723e-4fa4-bf6d-938599476fe5",
+      "first_name": "Алексей",
+      "last_name": "Кузнецов",
+      "email": "al.kuznetsov@yandex.ru",
+      "order_date": "2025-06-20",
+      "start_time": "09:00:00",
+      "end_time": "11:00:00",
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+      "status": "new",
+      "club_name": "Клуб пляжного волейбола Rio",
+      "club_address": "Елагин остров"
+    },
+    {
+      "id": "78131ef6-e8c1-434e-a15e-a70308a625ca",
+      "first_name": "Мария",
+      "last_name": "Фёдорова",
+      "email": "maria.fedorova@gmail.com",
+      "order_date": "2025-07-22",
+      "start_time": "15:00:00",
+      "end_time": "17:00:00",
+      "club_id": "56ffef60-3aea-4256-b918-80477bc6ccb5",
+      "status": "new",
+      "club_name": "Спортивный комплекс Хоккейный город СКА",
+      "club_address": "Российский просп., 6"
+    },
+    {
+      "id": "4dbc3712-10fd-4d8a-9f9b-4c908ffcb332",
+      "first_name": "Владимир",
+      "last_name": "Ленин",
+      "email": "ilyich@ussr.com",
+      "order_date": "2025-05-24",
+      "start_time": "15:55:00",
+      "end_time": "16:10:00",
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+      "status": "cancelled",
+      "club_name": "Центр пляжного спорта Динамо",
+      "club_address": "проспект Динамо, 44Б"
+    },
+    {
+      "id": "bcdfc24c-13db-45b5-9ee3-012e4740c020",
+      "first_name": "Дмитрий",
+      "last_name": "Соколов",
+      "email": "d.sokolov@gmail.com",
+      "order_date": "2025-06-19",
+      "start_time": "11:00:00",
+      "end_time": "13:00:00",
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42",
+      "status": "in_processing",
+      "club_name": "Ледовый каток Богатырь",
+      "club_address": "Гаккелевская ул., 25, корп. 2Б"
+    },
+    {
+      "id": "191950c0-f548-400b-af1f-43b300d0a6bf",
+      "first_name": "Сергей",
+      "last_name": "Попов",
+      "email": "sergey.popov@mail.com",
+      "order_date": "2025-05-02",
+      "start_time": "10:00:00",
+      "end_time": "12:00:00",
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+      "status": "completed",
+      "club_name": "Центр пляжного спорта Динамо",
+      "club_address": "проспект Динамо, 44Б"
+    },
+    {
+      "id": "47ef1eb0-a1b7-4449-a639-ffa31dd0277b",
+      "first_name": "Анна",
+      "last_name": "Васильева",
+      "email": "anna.vasileva@yandex.ru",
+      "order_date": "2025-05-02",
+      "start_time": "13:00:00",
+      "end_time": "15:00:00",
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+      "status": "completed",
+      "club_name": "Центр пляжного спорта Динамо",
+      "club_address": "проспект Динамо, 44Б"
+    },
+    {
+      "id": "ff0d8a8f-2c3d-4451-8237-4fbbd8251063",
+      "first_name": "Андрей",
+      "last_name": "Морозов",
+      "email": "a.morozov@mail.com",
+      "order_date": "2025-05-02",
+      "start_time": "09:30:00",
+      "end_time": "11:30:00",
+      "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+      "status": "completed",
+      "club_name": "Теннисный клуб Fresh Fitness",
+      "club_address": "Выборгское ш., 6"
+    },
+    {
+      "id": "ef752b10-5020-4577-ad92-4df85adb61d6",
+      "first_name": "Алёна",
+      "last_name": "Смирнова",
+      "email": "elena.smirnova@gmail.com",
+      "order_date": "2025-05-01",
+      "start_time": "15:00:00",
+      "end_time": "16:00:00",
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+      "status": "completed",
+      "club_name": "Клуб пляжного волейбола Rio",
+      "club_address": "Елагин остров"
+    },
+    {
+      "id": "cdfb53e6-d0b4-42ca-99ef-dc53caad3e4f",
+      "first_name": "Ольга",
+      "last_name": "Иванова",
+      "email": "olga.ivanova@mail.com",
+      "order_date": "2025-06-16",
+      "start_time": "16:00:00",
+      "end_time": "18:00:00",
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42",
+      "status": "new",
+      "club_name": "Ледовый каток Богатырь",
+      "club_address": "Гаккелевская ул., 25, корп. 2Б"
+    },
+    {
+      "id": "cee562bd-1998-4f11-a8ec-2ae73846c820",
+      "first_name": "Наталья",
+      "last_name": "Жукова",
+      "email": "natalia.zhukova@yandex.ru",
+      "order_date": "2025-06-24",
+      "start_time": "14:00:00",
+      "end_time": "16:00:00",
+      "club_id": "707aa0ae-2e52-4ae1-8112-845695ecc5b8",
+      "status": "new",
+      "club_name": "Теннисный клуб Глория",
+      "club_address": "Московский парк Победы"
+    },
+    {
+      "id": "6ff5b521-175e-46f7-88fc-fc01bbd76d61",
+      "first_name": "Владимир",
+      "last_name": "Ленин",
+      "email": "ilyich@ussr.com",
+      "order_date": "2025-05-24",
+      "start_time": "17:55:00",
+      "end_time": "18:00:00",
+      "club_id": "c69d3a19-bff2-42d3-867b-68a21b99d8de",
+      "status": "completed",
+      "club_name": "Футбольный стадион Химик",
+      "club_address": "Рябовское ш., 9"
+    }
+  ],
+  "routes": [
+    {
+      "id": "308301ac-fa99-433d-80e3-0aa109ad55fd",
+      "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.7588,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7588,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "id": "ab55bb1a-4a52-4dd3-aaa1-6580f7730b3f",
+      "club_id": "3b94cb12-920d-4a30-a2b8-d8b4fbedbd42",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.7589,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7589,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "id": "85fda8e2-aa55-4208-9482-acad1f34e467",
+      "club_id": "c69d3a19-bff2-42d3-867b-68a21b99d8de",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.7777,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7777,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "id": "7e903ac2-81a1-46f5-8d24-41c8cef8cead",
+      "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.7558,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7558,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "id": "9c37868c-4d09-490d-9455-8417e9dd9470",
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.756,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7561,
+          "longitude": 37.6176,
+          "altitude": 115.0,
+          "color": "yellow"
+        },
+        {
+          "sequence_number": 5,
+          "latitude": 55.756,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "id": "59339255-a1b4-4c16-97e8-42642836d898",
+      "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.7551,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7551,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "id": "22e8bb05-6a49-44c1-9d9a-8d056d6c2108",
+      "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+      "points": [
+        {
+          "sequence_number": 1,
+          "latitude": 55.7555,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        },
+        {
+          "sequence_number": 2,
+          "latitude": 55.756,
+          "longitude": 37.6175,
+          "altitude": 120.0,
+          "color": "blue"
+        },
+        {
+          "sequence_number": 3,
+          "latitude": 55.7562,
+          "longitude": 37.6177,
+          "altitude": 110.0,
+          "color": "green"
+        },
+        {
+          "sequence_number": 4,
+          "latitude": 55.7555,
+          "longitude": 37.6173,
+          "altitude": 100.0,
+          "color": "red"
+        }
+      ]
+    }
+  ],
+  "flight_tasks": [
+    {
+      "id": "78ee0cc2-9311-40ea-8ead-06e901932c2b",
+      "order": {
+        "id": "47ef1eb0-a1b7-4449-a639-ffa31dd0277b",
+        "first_name": "Анна",
+        "last_name": "Васильева",
+        "email": "anna.vasileva@yandex.ru",
+        "order_date": "2025-05-02",
+        "start_time": "13:00:00",
+        "end_time": "15:00:00",
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+        "status": "completed",
+        "club_name": "Центр пляжного спорта Динамо",
+        "club_address": "проспект Динамо, 44Б"
+      },
+      "operator": {
+        "id": "6acfec08-8a1a-499d-9a8a-3d5bcc32ee38",
+        "email": "admin@example.com",
+        "username": "Admin",
+        "is_superuser": true
+      },
+      "route": {
+        "id": "9c37868c-4d09-490d-9455-8417e9dd9470",
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+        "points": [
+          {
+            "sequence_number": 1,
+            "latitude": 55.756,
+            "longitude": 37.6173,
+            "altitude": 100.0,
+            "color": "red"
+          },
+          {
+            "sequence_number": 2,
+            "latitude": 55.756,
+            "longitude": 37.6175,
+            "altitude": 120.0,
+            "color": "blue"
+          },
+          {
+            "sequence_number": 3,
+            "latitude": 55.7562,
+            "longitude": 37.6177,
+            "altitude": 110.0,
+            "color": "green"
+          },
+          {
+            "sequence_number": 4,
+            "latitude": 55.7561,
+            "longitude": 37.6176,
+            "altitude": 115.0,
+            "color": "yellow"
+          },
+          {
+            "sequence_number": 5,
+            "latitude": 55.756,
+            "longitude": 37.6173,
+            "altitude": 100.0,
+            "color": "red"
+          }
+        ]
+      },
+      "drone": {
+        "id": "b14d35e3-2959-4231-bb4c-5b5e23b601c7",
+        "model": "DJI Matrice 210 RTK",
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+        "battery_charge": 88
+      },
+      "camera": {
+        "id": "052adfeb-1fc2-4ba4-a076-49d0997b0747",
+        "model": "DJI Zenmuse L1",
+        "width_px": 8192,
+        "height_px": 5460,
+        "fps": 10,
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+      },
+      "lens": {
+        "id": "9f6c2841-ef1c-438b-93af-36a52cc109d6",
+        "model": "Zeiss Batis 18mm f/2.8",
+        "min_focal_length": 18,
+        "max_focal_length": 18,
+        "zoom_ratio": 1,
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+      }
+    },
+    {
+      "id": "45592f6a-31d7-45b0-b30b-3ff3221ae478",
+      "order": {
+        "id": "ff0d8a8f-2c3d-4451-8237-4fbbd8251063",
+        "first_name": "Андрей",
+        "last_name": "Морозов",
+        "email": "a.morozov@mail.com",
+        "order_date": "2025-05-02",
+        "start_time": "09:30:00",
+        "end_time": "11:30:00",
+        "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+        "status": "completed",
+        "club_name": "Теннисный клуб Fresh Fitness",
+        "club_address": "Выборгское ш., 6"
+      },
+      "operator": {
+        "id": "6acfec08-8a1a-499d-9a8a-3d5bcc32ee38",
+        "email": "admin@example.com",
+        "username": "Admin",
+        "is_superuser": true
+      },
+      "route": {
+        "id": "7e903ac2-81a1-46f5-8d24-41c8cef8cead",
+        "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+        "points": [
+          {
+            "sequence_number": 1,
+            "latitude": 55.7558,
+            "longitude": 37.6173,
+            "altitude": 100.0,
+            "color": "red"
+          },
+          {
+            "sequence_number": 2,
+            "latitude": 55.756,
+            "longitude": 37.6175,
+            "altitude": 120.0,
+            "color": "blue"
+          },
+          {
+            "sequence_number": 3,
+            "latitude": 55.7562,
+            "longitude": 37.6177,
+            "altitude": 110.0,
+            "color": "green"
+          },
+          {
+            "sequence_number": 4,
+            "latitude": 55.7558,
+            "longitude": 37.6173,
+            "altitude": 100.0,
+            "color": "red"
+          }
+        ]
+      },
+      "drone": {
+        "id": "4eaf037b-3396-45e6-a645-b87c5b8582be",
+        "model": "DJI Air 2S",
+        "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+        "battery_charge": 91
+      },
+      "camera": {
+        "id": "a7f2eebc-560f-48f7-a45f-ad81282a0760",
+        "model": "DJI Phantom 4 Pro V2.0",
+        "width_px": 5472,
+        "height_px": 3648,
+        "fps": 60,
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+      },
+      "lens": {
+        "id": "f71df5dd-d37a-4dfe-95db-8abaa16a6645",
+        "model": "DJI DL 24mm f/2.8",
+        "min_focal_length": 24,
+        "max_focal_length": 24,
+        "zoom_ratio": 1,
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+      }
+    },
+    {
+      "id": "71fe1184-2407-40e9-bee2-2308fbab879e",
+      "order": {
+        "id": "ef752b10-5020-4577-ad92-4df85adb61d6",
+        "first_name": "Алёна",
+        "last_name": "Смирнова",
+        "email": "elena.smirnova@gmail.com",
+        "order_date": "2025-05-01",
+        "start_time": "15:00:00",
+        "end_time": "16:00:00",
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+        "status": "completed",
+        "club_name": "Клуб пляжного волейбола Rio",
+        "club_address": "Елагин остров"
+      },
+      "operator": {
+        "id": "54647859-35b7-4fdf-a82c-a64a468bb48c",
+        "email": "user@example.com",
+        "username": "User",
+        "is_superuser": false
+      },
+      "route": {
+        "id": "59339255-a1b4-4c16-97e8-42642836d898",
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+        "points": [
+          {
+            "sequence_number": 1,
+            "latitude": 55.7551,
+            "longitude": 37.6173,
+            "altitude": 100.0,
+            "color": "red"
+          },
+          {
+            "sequence_number": 2,
+            "latitude": 55.756,
+            "longitude": 37.6175,
+            "altitude": 120.0,
+            "color": "blue"
+          },
+          {
+            "sequence_number": 3,
+            "latitude": 55.7562,
+            "longitude": 37.6177,
+            "altitude": 110.0,
+            "color": "green"
+          },
+          {
+            "sequence_number": 4,
+            "latitude": 55.7551,
+            "longitude": 37.6173,
+            "altitude": 100.0,
+            "color": "red"
+          }
+        ]
+      },
+      "drone": {
+        "id": "46c38422-2719-4c94-addc-8dfb68027721",
+        "model": "DJI Mavic 3 Enterprise",
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+        "battery_charge": 90
+      },
+      "camera": {
+        "id": "6a96e89c-f209-4d71-9236-75e4470dda42",
+        "model": "DJI Mavic 3 Enterprise",
+        "width_px": 5280,
+        "height_px": 3956,
+        "fps": 30,
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+      },
+      "lens": {
+        "id": "6fecd80b-87bd-4c01-9a4c-fda4fc1cde46",
+        "model": "DJI Zenmuse X5 15mm f/1.7",
+        "min_focal_length": 15,
+        "max_focal_length": 15,
+        "zoom_ratio": 1,
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+      }
+    }
+	]
+}

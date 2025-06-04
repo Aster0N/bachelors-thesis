@@ -17,6 +17,10 @@ html {
   flex-direction: column;
 }
 
+a {
+  color: inherit;
+}
+
 main {
   flex: 1 1 auto;
 }

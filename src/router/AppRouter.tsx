@@ -6,7 +6,8 @@ import { Navigate, Route, Routes } from "react-router-dom"
 
 const AppRouter = () => {
   const { setAuth } = useUserStore()
-  const [isAuth, setIsAuth] = useState(false)
+  // ! IS AUTH DEFAULT FALSE
+  const [isAuth, setIsAuth] = useState(true)
 
   useEffect(() => {
     const accessToken = localStorage.getItem("access_token")

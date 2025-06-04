@@ -1,5 +1,17 @@
-type AvailableRoutes = "/" | "/auth"
-export type RouteNames = "ROOT_PATH" | "AUTH_PATH"
+type AvailableRoutes =
+  | "/"
+  | "/auth"
+  | "/profile"
+  | "/orders"
+  | "/routes"
+  | "/route/:id"
+export type RouteNames =
+  | "ROOT_PATH"
+  | "AUTH_PATH"
+  | "PROFILE_PATH"
+  | "ORDERS_PATH"
+  | "ROUTES_PATH"
+  | "ROUTE_DETAIL_PATH"
 
 export type PrivateRoutes = Record<RouteNames, AvailableRoutes>
 export type PublicRoutes = Pick<PrivateRoutes, "AUTH_PATH">
