@@ -8,6 +8,7 @@ export type User = {
 export type UserStore = {
   user: User | null
   accessToken: string | null
+	setToken: (accessToken: string) => void
   setAuth: (user: User, accessToken: string) => void
   clearAuth: () => void
 }

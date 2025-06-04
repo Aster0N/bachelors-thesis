@@ -7,9 +7,11 @@ import { PRIVATE_ROUTES, PUBLIC_ROUTES } from "./routes"
 
 const AppRouter = () => {
   const { accessToken, setAuth, clearAuth } = useUserStore()
-  const [isAuth, setIsAuth] = useState<boolean | null>(null)
+  const [isAuth, setIsAuth] = useState<boolean | null>(false)
+  const [isPending, setIsPending] = useState(true)
 
   const checkAuth = async () => {
+    setIsPending(true)
     const accessToken = localStorage.getItem("access_token")
     if (accessToken) {
       const user = await AuthService.fetchCurrentUser()
@@ -19,13 +21,14 @@ const AppRouter = () => {
       clearAuth()
       setIsAuth(false)
     }
+    setIsPending(false)
   }
 
   useEffect(() => {
     checkAuth()
   }, [accessToken])
 
-  if (isAuth === null) {
+  if (isPending) {
     return <div>Загрузка...</div>
   }
 
