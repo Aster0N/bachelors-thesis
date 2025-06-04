@@ -1,0 +1,25 @@
+@use "@/styles/fonts.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+.card {
+  width: 200px;
+  min-height: 150px;
+  border: 1px solid $text-dark;
+  border-radius: $border-radius-m;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bottom {
+  align-self: flex-start;
+  color: $secondary;
+}

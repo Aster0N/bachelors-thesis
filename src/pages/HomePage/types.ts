@@ -6,8 +6,8 @@ export type OrdersPreview = {
 }
 
 export type FlightTaskPreview = {
-  id: number
-  status: string
+  id: string
+  status?: string
   date: string
 }
 

@@ -1,4 +1,9 @@
-import { OrdersPreview, OrdersResponse } from "./types"
+import {
+  FlightTaskPreview,
+  FlightTasksResponse,
+  OrdersPreview,
+  OrdersResponse,
+} from "./types"
 
 export const fetchOrdersData = async () => {
   const ordersData = await fetch("/test_data/orders.json")
@@ -24,5 +29,15 @@ export const getOrdersPreviewData = (
     client: `${item.first_name} ${item.last_name}`,
     email: item.email,
     status: item.status,
+  }))
+}
+
+export const getFlightTasksPreviewData = (
+  flightTasks: FlightTasksResponse[]
+): FlightTaskPreview[] => {
+  return flightTasks.map((item: FlightTasksResponse) => ({
+    id: item.id,
+    date: item.order.order_date,
+    status: item.order.status,
   }))
 }
