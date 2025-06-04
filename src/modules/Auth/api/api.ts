@@ -11,7 +11,7 @@ const api = axios.create({
 
 // add access_token to header
 api.interceptors.request.use(config => {
-  const { accessToken } = useUserStore.getState()
+  const accessToken = localStorage.getItem("access_token")
   if (accessToken) {
     config.headers.Authorization = `Bearer ${accessToken}`
   }
@@ -29,8 +29,8 @@ api.interceptors.response.use(
       !originalRequest._retry
     ) {
       originalRequest._retry = true
-      // localStorage.removeItem("access_token")
-      // console.error("Время жизни токена закончилось")
+      console.error("Время жизни токена закончилось")
+
       try {
         const { data } = await axios.post(
           `${URL}/login/refresh-token`,
@@ -48,7 +48,6 @@ api.interceptors.response.use(
       } catch (refreshError) {
         useUserStore.getState().clearAuth()
         localStorage.removeItem("access_token")
-        // ! window.location.href = "/auth"
         return Promise.reject(refreshError)
       }
     }

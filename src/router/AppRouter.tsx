@@ -1,28 +1,25 @@
-import { AuthService } from "@/modules/Auth/api/AuthService"
 import { useUserStore } from "@/modules/Auth/store/userStore"
 import { privateRoutes, publicRoutes } from "@/router/index.ts"
 import { useEffect, useState } from "react"
 import { Navigate, Route, Routes } from "react-router-dom"
+import { PRIVATE_ROUTES, PUBLIC_ROUTES } from "./routes"
 
 const AppRouter = () => {
-  const { setAuth } = useUserStore()
-  // ! IS AUTH DEFAULT FALSE
-  const [isAuth, setIsAuth] = useState(true)
+  const { accessToken } = useUserStore()
+  const [isAuth, setIsAuth] = useState<boolean | null>(null)
 
   useEffect(() => {
     const accessToken = localStorage.getItem("access_token")
     if (accessToken) {
-      AuthService.fetchCurrentUser()
-        .then(user => {
-          setAuth(user, accessToken)
-          setIsAuth(true)
-        })
-        .catch(() => {
-          localStorage.removeItem("access_token")
-          setIsAuth(false)
-        })
+      setIsAuth(true)
+    } else {
+      setIsAuth(false)
     }
-  }, [setAuth])
+  }, [accessToken])
+
+  if (isAuth === null) {
+    return <div>Загрузка...</div>
+  }
 
   return (
     <Routes>
@@ -35,7 +32,15 @@ const AppRouter = () => {
         privateRoutes?.map(route => (
           <Route key={route.path} path={route.path} element={route.element} />
         ))}
-      <Route path="*" element={<Navigate to="/auth" />} />
+
+      <Route
+        path="*"
+        element={
+          <Navigate
+            to={isAuth ? PRIVATE_ROUTES.ROOT_PATH : PUBLIC_ROUTES.AUTH_PATH}
+          />
+        }
+      />
     </Routes>
   )
 }
