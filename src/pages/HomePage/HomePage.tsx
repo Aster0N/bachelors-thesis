@@ -1,6 +1,7 @@
 import DynamicTable from "@/components/DynamicTable/DynamicTable"
 import FlightTaskCard from "@/components/FlightTaskCard/FlightTaskCard"
 import { useEffect, useState } from "react"
+import { FlightTaskPreview, OrdersPreview } from "../../types/typesDataPreview"
 import {
   fetchFlightTasksData,
   fetchOrdersData,
@@ -8,7 +9,6 @@ import {
   getOrdersPreviewData,
 } from "./helpers"
 import classes from "./HomePage.module.scss"
-import { FlightTaskPreview, OrdersPreview } from "./types"
 
 const HomePage = () => {
   const [ordersDataPreview, setOrdersDataPreview] = useState<OrdersPreview[]>()

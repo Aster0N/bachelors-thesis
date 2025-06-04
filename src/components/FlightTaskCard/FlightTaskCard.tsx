@@ -1,4 +1,4 @@
-import type { FlightTaskPreview } from "@/pages/HomePage/types"
+import type { FlightTaskPreview } from "@/types/typesDataPreview"
 import React from "react"
 import classes from "./FlightTaskCard.module.scss"
 

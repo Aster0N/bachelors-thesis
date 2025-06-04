@@ -1,5 +1,5 @@
-import { User } from "../store/types"
-import { api } from "./api"
+import { api } from "@/api/api"
+import { User } from "./store/types"
 
 export class AuthService {
   static login = async (email: string, password: string) => {

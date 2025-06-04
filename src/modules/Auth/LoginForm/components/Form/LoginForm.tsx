@@ -1,6 +1,6 @@
 import Button from "@/components/Button/Button"
 import Input from "@/components/Input/Input"
-import { AuthService } from "@/modules/Auth/api/AuthService"
+import { AuthService } from "@/modules/Auth/AuthService"
 import { useUserStore } from "@/modules/Auth/store/userStore"
 import { PRIVATE_ROUTES } from "@/router/routes"
 import { useState } from "react"

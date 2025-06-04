@@ -1,6 +1,6 @@
 import axios, { AxiosError } from "axios"
 
-import { useUserStore } from "../store/userStore"
+import { useUserStore } from "@/modules/Auth/store/userStore"
 
 const URL = "http://localhost:8000"
 //const URL = "http://91.238.230.96"

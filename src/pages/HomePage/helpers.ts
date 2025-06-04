@@ -1,16 +1,12 @@
-import {
-  FlightTaskPreview,
-  FlightTasksResponse,
-  OrdersPreview,
-  OrdersResponse,
-} from "./types"
+import { FlightTaskPreview, OrdersPreview } from "@/types/typesDataPreview"
+import { FlightTask, Order } from "@/types/typesEntities"
 
 export const fetchOrdersData = async () => {
-  const ordersData = await fetch("/test_data/orders.json")
+  const data = await fetch("/test_data/orders.json")
     .then(data => data.json())
     .then(json => json.orders)
 
-  return ordersData
+  return data
 }
 
 export const fetchFlightTasksData = async () => {
@@ -21,10 +17,8 @@ export const fetchFlightTasksData = async () => {
   return flightTasks
 }
 
-export const getOrdersPreviewData = (
-  orders: OrdersResponse[]
-): OrdersPreview[] => {
-  return orders.map((item: OrdersResponse) => ({
+export const getOrdersPreviewData = (orders: Order[]): OrdersPreview[] => {
+  return orders.map((item: Order) => ({
     date: item.order_date,
     client: `${item.first_name} ${item.last_name}`,
     email: item.email,
@@ -33,9 +27,9 @@ export const getOrdersPreviewData = (
 }
 
 export const getFlightTasksPreviewData = (
-  flightTasks: FlightTasksResponse[]
+  flightTasks: FlightTask[]
 ): FlightTaskPreview[] => {
-  return flightTasks.map((item: FlightTasksResponse) => ({
+  return flightTasks.map((item: FlightTask) => ({
     id: item.id,
     date: item.order.order_date,
     status: item.order.status,
