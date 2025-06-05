@@ -1,6 +1,6 @@
+import { ChevronDown } from "lucide-react"
 import { useState } from "react"
 import classes from "./Select.module.scss"
-import DropdownArrow from "/assets/img/dropdown-arrow.svg"
 
 type SelectProps<T extends string> = {
   value: T
@@ -25,12 +25,12 @@ export const Select = <T extends string>({
   }
 
   return (
-    <div className={[classes.selectWrapper, "_caption-bold"].join(" ")}>
+    <div className={[classes.selectWrapper, "_caption"].join(" ")}>
       <div
         className={[classes.selectButton, className].join(" ")}
         onClick={() => setIsOpen(prev => !prev)}
       >
-        {value || placeholder} <img src={DropdownArrow} alt="выбрать" />
+        {value || placeholder} <ChevronDown />
       </div>
 
       {isOpen && (

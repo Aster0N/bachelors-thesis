@@ -12,6 +12,12 @@
   padding: 12px;
   box-sizing: border-box;
   cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border: 1px solid $secondary;
+    background-color: $helper-40;
+  }
 }
 
 .top {

@@ -1,7 +1,6 @@
 import Button from "@/components/Button/Button"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import classes from "./PaginationControls.module.scss"
-import ChevronLeft from "/assets/img/chevron-left.svg"
-import ChevronRight from "/assets/img/chevron-right.svg"
 
 type PaginationControlsProps = {
   prevPage: () => void
@@ -23,7 +22,7 @@ const PaginationControls: React.FC<PaginationControlsProps> = ({
         disabled={currentPage === 0}
         className={classes.controlBtn}
       >
-        <img src={ChevronLeft} alt="назад" />
+        <ChevronLeft />
       </Button>
 
       <span className={classes.pageNumber}>{currentPage + 1}</span>
@@ -33,7 +32,7 @@ const PaginationControls: React.FC<PaginationControlsProps> = ({
         disabled={currentPage + 1 >= totalPages}
         className={classes.controlBtn}
       >
-        <img src={ChevronRight} alt="вперёд" />
+        <ChevronRight />
       </Button>
     </div>
   )

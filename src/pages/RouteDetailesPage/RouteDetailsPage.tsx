@@ -1,4 +1,5 @@
 import { FlightTaskDetails } from "@/modules/FlightTasks/index"
+import { PathField } from "@/modules/PathField/index"
 import { useParams } from "react-router-dom"
 import classes from "./RouteDetailsPage.module.scss"
 
@@ -16,7 +17,7 @@ const RouteDetailsPage = () => {
         <h3 className={classes.heading}>#{id.slice(-4)}</h3>
         <div className={classes.flightTaskContainer}>
           <FlightTaskDetails flightTaskId={id} />
-          {/* coordinate path */}
+          <PathField />
         </div>
       </div>
     </>
