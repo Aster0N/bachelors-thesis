@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { OrdersService } from "../../OrdersService"
 import { useOrderStore } from "../../store/ordersStore"
 import OrderPreview from "../OrderPreview/OrderPreview"
 import OrdersList from "../OrdersList/OrdersList"
@@ -7,24 +6,21 @@ import PaginationControls from "../PaginationControls/PaginationControls"
 import classes from "./Orders.module.scss"
 
 const Orders = () => {
-  // const [orders, setOrders] = useState<Order[]>([])
-  const [total, setTotal] = useState(0)
-  const [page, setPage] = useState(
-    () => Number(localStorage.getItem("orders_page")) || 0
-  )
-  const { orders, setOrdersData } = useOrderStore()
-  const [totalPages, setTotalPages] = useState(0)
+  const { pageOrders, total, page, pageSize, fetchOrders, setPage } =
+    useOrderStore()
   const [selectedOrderId, setSelectedOrderId] = useState<string | null>(() =>
     localStorage.getItem("selected_order_id")
   )
-  const selectedOrder = orders.find(order => order.id === selectedOrderId)
 
-  const fetchData = async () => {
-    const { data, total } = await OrdersService.fetchOrdersByPage(page)
-    // setOrders(data)
-    setOrdersData(data)
-    setTotal(total)
-    setTotalPages(Math.ceil(total / OrdersService.pageSize))
+  const selectedOrder = pageOrders.find(order => order.id === selectedOrderId)
+
+  const nextPage = () => {
+    const totalPages = Math.ceil(total / pageSize)
+    setPage(Math.min(page + 1, totalPages - 1))
+  }
+
+  const prevPage = () => {
+    setPage(Math.max(page - 1, 0))
   }
 
   const handleSelectOrder = (id: string) => {
@@ -32,25 +28,9 @@ const Orders = () => {
     localStorage.setItem("selected_order_id", id)
   }
 
-  const nextPage = () => {
-    setPage(prev => {
-      const newPage = Math.min(prev + 1, totalPages - 1)
-      localStorage.setItem("orders_page", String(newPage))
-      return newPage
-    })
-  }
-
-  const prevPage = () => {
-    setPage(prev => {
-      const newPage = Math.max(prev - 1, 0)
-      localStorage.setItem("orders_page", String(newPage))
-      return newPage
-    })
-  }
-
   useEffect(() => {
-    fetchData()
-  }, [page])
+    fetchOrders()
+  }, [])
 
   return (
     <>
@@ -59,7 +39,7 @@ const Orders = () => {
         <div className={classes.ordersList}>
           <div>
             <OrdersList
-              orderList={orders}
+              orderList={pageOrders}
               onSelect={handleSelectOrder}
               selectedId={selectedOrderId}
             />
@@ -68,7 +48,7 @@ const Orders = () => {
             prevPage={prevPage}
             nextPage={nextPage}
             currentPage={page}
-            totalPages={totalPages}
+            totalPages={Math.ceil(total / pageSize)}
           />
         </div>
         <div className={classes.orderPreviewWrapper}>
