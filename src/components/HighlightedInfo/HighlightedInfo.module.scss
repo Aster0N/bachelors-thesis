@@ -1,0 +1,21 @@
+@use "@/styles/variables.scss" as *;
+
+.info {
+  border-radius: $border-radius-m;
+  background-color: $primary;
+  padding: 5px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &.textOverflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 150px;
+    white-space: nowrap;
+  }
+}

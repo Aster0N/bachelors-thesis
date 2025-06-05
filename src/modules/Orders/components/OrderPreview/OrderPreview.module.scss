@@ -1,0 +1,32 @@
+@use "@/styles/variables.scss" as *;
+
+.ordersPreview {
+  min-height: 45vh;
+  padding: 30px 20px;
+  border: 1px solid $text-dark;
+  border-radius: $border-radius-m;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .previewHeader {
+    margin: 0;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.rowInfo {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.previewContent {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
