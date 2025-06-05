@@ -1,5 +1,5 @@
 import FlightTaskCard from "@/components/FlightTaskCard/FlightTaskCard"
-import { FlightTaskService } from "@/modules/FlightTasks/FlightTasksService"
+import { FlightTaskService } from "@/modules/FlightTasks/FlightTaskService"
 import { FlightTaskPreview } from "@/modules/FlightTasks/types"
 import { PRIVATE_ROUTES } from "@/router/routes"
 import { useEffect, useState } from "react"

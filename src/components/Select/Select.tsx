@@ -1,24 +1,25 @@
-import { OrderStatus } from "@/types/typesEntities"
 import { useState } from "react"
 import classes from "./Select.module.scss"
 import DropdownArrow from "/assets/img/dropdown-arrow.svg"
 
-type Props = {
-  value: OrderStatus
-  onChange?: (newStatus: OrderStatus) => void
+type SelectProps<T extends string> = {
+  value: T
+  options: T[]
+  onChange?: (newValue: T) => void
+  placeholder?: string
+  className?: string
 }
 
-const statusOptions: OrderStatus[] = [
-  "new",
-  "in_progress",
-  "completed",
-  "cancelled",
-]
-
-export const Select: React.FC<Props> = ({ value, onChange }) => {
+export const Select = <T extends string>({
+  value,
+  options,
+  onChange,
+  placeholder = "Выбрать...",
+  className,
+}: SelectProps<T>) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const handleSelect = (option: OrderStatus) => {
+  const handleSelect = (option: T) => {
     setIsOpen(false)
     onChange?.(option)
   }
@@ -26,15 +27,15 @@ export const Select: React.FC<Props> = ({ value, onChange }) => {
   return (
     <div className={[classes.selectWrapper, "_caption-bold"].join(" ")}>
       <div
-        className={classes.selectButton}
+        className={[classes.selectButton, className].join(" ")}
         onClick={() => setIsOpen(prev => !prev)}
       >
-        {value} <img src={DropdownArrow} alt="выбрать" />
+        {value || placeholder} <img src={DropdownArrow} alt="выбрать" />
       </div>
 
       {isOpen && (
         <div className={classes.optionsList}>
-          {statusOptions.map(
+          {options.map(
             option =>
               option !== value && (
                 <div

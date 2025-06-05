@@ -1,6 +1,6 @@
 import DynamicTable from "@/components/DynamicTable/DynamicTable"
 import FlightTaskCard from "@/components/FlightTaskCard/FlightTaskCard"
-import { FlightTaskService } from "@/modules/FlightTasks/FlightTasksService"
+import { FlightTaskService } from "@/modules/FlightTasks/FlightTaskService"
 import { OrdersService } from "@/modules/Orders/OrdersService"
 import { PRIVATE_ROUTES } from "@/router/routes"
 import { useEffect, useState } from "react"

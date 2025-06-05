@@ -18,6 +18,13 @@ const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
   const orderStatus = getOrderStatus(order?.id)
   const navigate = useNavigate()
 
+  const orderStatusOptions: OrderStatus[] = [
+    "new",
+    "in_progress",
+    "completed",
+    "cancelled",
+  ]
+
   const updateStatus = (newStatus: OrderStatus) => {
     updateOrderStatus(order.id, newStatus)
   }
@@ -39,15 +46,11 @@ const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
           {orderData.map(orderInfo => (
             <div className={classes.blockInfo} key={orderInfo.heading}>
               <p className={classes.rowInfo}>
-                <big
-                  className={[classes.userInfo, classes.underline].join(" ")}
-                >
-                  {orderInfo.heading}
-                </big>
+                <big className={classes.underline}>{orderInfo.heading}</big>
               </p>
               {orderInfo.rows.map(row => (
                 <p className={classes.rowInfo} key={row.label}>
-                  {row.label}{" "}
+                  {row.label}
                   <HighlightedInfo
                     info={row.data}
                     textOverflow={row.label == "id"}
@@ -62,7 +65,12 @@ const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
         <hr />
         <div className={classes.ordersPreviewControls}>
           <div>
-            Статус заказа <Select value={orderStatus} onChange={updateStatus} />
+            Статус заказа{" "}
+            <Select
+              value={orderStatus}
+              onChange={updateStatus}
+              options={orderStatusOptions}
+            />
           </div>
           {orderStatus === "new" ? (
             <Button onClick={handleGoToRoute}>Проложить маршрут</Button>

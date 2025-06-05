@@ -5,7 +5,7 @@ import { PRIVATE_ROUTES, PUBLIC_ROUTES } from "./routes.ts"
 import HomePage from "@/pages/HomePage/HomePage.tsx"
 import OrdersPage from "@/pages/OrdersPage/OrdersPage.tsx"
 import ProfilePage from "@/pages/ProfilePage/ProfilePage.tsx"
-import RouteDetailesPage from "@/pages/RouteDetailesPage/RouteDetailesPage.tsx"
+import RouteDetailesPage from "@/pages/RouteDetailesPage/RouteDetailsPage.tsx"
 import RoutesPage from "@/pages/RoutesPage/RoutesPage.tsx"
 import type { RouteElement } from "./types.ts"
 
