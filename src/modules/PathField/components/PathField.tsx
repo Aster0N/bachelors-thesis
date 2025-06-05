@@ -1,6 +1,7 @@
 import Button from "@/components/Button/Button"
 import ColorDropdown from "@/components/ColorDropdown/ColorDropDown"
 import ContextMenu from "@/components/ContextMenu/ContextMenu"
+import Input from "@/components/Input/Input"
 import type { Point } from "@/types/points"
 import { LockKeyhole, LockKeyholeOpen } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
@@ -51,6 +52,7 @@ const PathField = () => {
         uid: newPoint.uid,
         x: newPoint.x,
         y: newPoint.y,
+        z: initialPointInfo.z,
         hex: newPoint.hex,
       },
     })
@@ -75,6 +77,7 @@ const PathField = () => {
       uid: pointData.uid,
       x: event.clientX,
       y: event.clientY,
+      z: pointData.z,
       hex: pointData.hex,
     })
     /*
@@ -106,19 +109,49 @@ const PathField = () => {
     setPoints(updatedPoints)
   }
 
+  const changeZCoord = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newZ = Number(e.target.value)
+    const updatedPoints = {
+      ...points,
+      [contextMenuPointInfo.uid]: {
+        ...points[contextMenuPointInfo.uid],
+        z: newZ,
+      },
+    }
+    setPoints(updatedPoints)
+    setContextMenuPointInfo(prev => ({
+      ...prev,
+      z: newZ,
+    }))
+  }
+
+  // TODO FLIGHT TASK STORE
+
   return (
     <div className={classes.pathField}>
       {isContextMenuOpen && (
         <ContextMenu
-          coords={{ x: contextMenuPointInfo.x, y: contextMenuPointInfo.y }}
+          coords={{
+            x: contextMenuPointInfo.x,
+            y: contextMenuPointInfo.y,
+            z: contextMenuPointInfo.z,
+          }}
           onClose={closeContextMenu}
         >
-          <Button onClick={deletePoint}>delete</Button>
+          <Input
+            type="number"
+            value={contextMenuPointInfo.z}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              changeZCoord(e)
+            }
+            className={classes.inputCoordChange}
+          />
           <ColorDropdown
             key={contextMenuPointInfo?.uid}
             selected={contextMenuPointInfo?.hex}
             onChange={handleSelectColorChange}
           ></ColorDropdown>
+          <Button onClick={deletePoint}>delete</Button>
         </ContextMenu>
       )}
       <svg
@@ -133,13 +166,13 @@ const PathField = () => {
           onClick={() => setIsEditable(!isEditable)}
           disabled={svgControlsDisabled}
         >
-          {isEditable ? "save" : "edit position"}
+          {isEditable ? "сохранить" : "изменить маршрут"}
         </Button>
         <Button
           className={lockSVGField ? classes.lockedFieldBtn : ""}
           onClick={() => setLockSVGField(!lockSVGField)}
         >
-          <span>lock field</span>
+          <span>заблокировать поле</span>
           {lockSVGField ? (
             <LockKeyhole size={20} />
           ) : (
@@ -151,7 +184,7 @@ const PathField = () => {
           onClick={clearField}
           disabled={svgControlsDisabled}
         >
-          clear
+          очистить
         </Button>
       </div>
     </div>

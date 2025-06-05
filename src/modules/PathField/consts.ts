@@ -38,5 +38,6 @@ export const initialPointInfo: Point = {
   uid: "",
   x: 0,
   y: 0,
+  z: 50,
   hex: defaultColor,
 }

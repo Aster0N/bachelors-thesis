@@ -1,14 +1,14 @@
-import { defaultColor } from "../../consts"
+import { defaultColor, initialPointInfo } from "../../consts"
 import type {
-	AddPoint,
-	GenerateUId,
-	UpdatePointColor,
-	UpdatePointCoords,
+  AddPoint,
+  GenerateUId,
+  UpdatePointColor,
+  UpdatePointCoords,
 } from "./types"
 
 export default class PointsService {
   static generateUId: GenerateUId = function (coords) {
-    const id = `${coords.x}-${coords.y}`
+    const id = `${coords.x}-${coords.y}-${coords.y}`
     const uid = `${crypto.randomUUID()}#${id}`
     return uid
   }
@@ -20,8 +20,9 @@ export default class PointsService {
     }
     const x = event.clientX - rect.left
     const y = event.clientY - rect.top
-    const pointId = PointsService.generateUId({ x, y })
-    const newPoint = { uid: pointId, x, y, hex: defaultColor }
+    const z = initialPointInfo.z
+    const pointId = PointsService.generateUId({ x, y, z })
+    const newPoint = { uid: pointId, x, y, z, hex: defaultColor }
 
     if (points[pointId]) {
       return

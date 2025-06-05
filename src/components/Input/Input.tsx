@@ -4,8 +4,9 @@ import EyeClosedImg from "./img/eye-off.svg"
 import EyeImg from "./img/eye.svg"
 
 interface InputProps {
-  label: string
+  label?: string
   placeholder?: string
+  value?: string | number
   type: string
   name?: string
   required?: boolean
@@ -16,6 +17,7 @@ interface InputProps {
 const Input = ({
   label,
   placeholder,
+  value,
   type,
   name = label,
   required = true,
@@ -28,10 +30,11 @@ const Input = ({
   return (
     <>
       <label htmlFor={inputId} className={classes.label}>
-        <span className="_small">{label}</span>
+        {label && <span className="_small">{label}</span>}
         <input
           id={inputId}
           placeholder={placeholder}
+          value={value}
           type={
             type == "password" ? (showPassword ? "text" : "password") : type
           }

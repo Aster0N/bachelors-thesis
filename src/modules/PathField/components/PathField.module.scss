@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss" as *;
+
 .pathField {
   width: 100%;
 }
@@ -17,7 +19,7 @@
 
 .clearBtn {
   border: 2px solid crimson;
-  background-color: rgba(220, 20, 60, 0.461);
+  background-color: rgba(220, 20, 60, 0.761);
 }
 
 .clearBtn:hover {
@@ -26,4 +28,8 @@
 
 .lockedFieldBtn {
   border: 1px solid orangered;
+}
+
+.inputCoordChange {
+  color: $text-light;
 }
