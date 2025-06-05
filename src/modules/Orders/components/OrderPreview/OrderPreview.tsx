@@ -1,6 +1,8 @@
 import Button from "@/components/Button/Button"
 import HighlightedInfo from "@/components/HighlightedInfo/HighlightedInfo"
-import { Order } from "@/types/typesEntities"
+import Select from "@/components/Select/Select"
+import { Order, OrderStatus } from "@/types/typesEntities"
+import { useState } from "react"
 import classes from "./OrderPreview.module.scss"
 import { structureOrderData } from "./helpers"
 
@@ -9,11 +11,12 @@ type OrderPreviewProps = {
 }
 
 const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
+  const [status, setStatus] = useState<OrderStatus>(order?.status)
+  const orderData = structureOrderData(order)
+
   if (!order) {
     return <big>Ошибка получения заявки. Попробуйте позже</big>
   }
-
-  const orderData = structureOrderData(order)
 
   return (
     <div className={classes.ordersPreview}>
@@ -45,7 +48,7 @@ const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
       </div>
       <div>
         <hr />
-        <p>Статус заказа {order.status}</p>
+        Статус заказа <Select value={status} onChange={setStatus} />
         <Button>Проложить маршрут</Button>
       </div>
     </div>
@@ -53,28 +56,3 @@ const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
 }
 
 export default OrderPreview
-
-/*
-<div>
-            <p className={classes.rowInfo}>
-              <big className={classes.underline}>Клуб</big>
-            </p>
-            <p className={classes.rowInfo}>
-              название <HighlightedInfo info={order.club_name} />
-            </p>
-            <p className={classes.rowInfo}>
-              адрес <HighlightedInfo info={order.club_address} />
-            </p>
-            <p className={classes.rowInfo}>
-              id <HighlightedInfo info={order.club_id} textOverflow={true} />
-            </p>
-          </div>
-          <div>
-            <p className={classes.rowInfo}>
-              <big className={classes.underline}>Мероприятие</big>
-            </p>
-            <p className={classes.rowInfo}>
-              Временной промежуток <HighlightedInfo info={order.start_time} />-
-              <HighlightedInfo info={order.end_time} />
-            </p>
-          </div>*/
