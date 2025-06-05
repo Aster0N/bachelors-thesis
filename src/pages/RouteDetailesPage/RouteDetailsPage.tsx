@@ -14,7 +14,10 @@ const RouteDetailsPage = () => {
       <h2>Маршрут #{id}</h2>
       <div className={classes.wrapper}>
         <h3 className={classes.heading}>#{id.slice(-4)}</h3>
-        <FlightTaskDetails flightTaskId={id} />
+        <div className={classes.flightTaskContainer}>
+          <FlightTaskDetails flightTaskId={id} />
+          {/* coordinate path */}
+        </div>
       </div>
     </>
   )

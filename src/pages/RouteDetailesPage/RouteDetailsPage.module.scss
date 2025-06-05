@@ -9,3 +9,9 @@
 .heading {
   margin: 0;
 }
+
+.flightTaskContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
