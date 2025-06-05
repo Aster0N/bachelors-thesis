@@ -1,7 +1,9 @@
 import Button from "@/components/Button/Button"
 import HighlightedInfo from "@/components/HighlightedInfo/HighlightedInfo"
 import Select from "@/components/Select/Select"
+import { PRIVATE_ROUTES } from "@/router/routes"
 import { Order, OrderStatus } from "@/types/typesEntities"
+import { useNavigate } from "react-router-dom"
 import { useOrderStore } from "../../store/ordersStore"
 import { structureOrderData } from "./helpers"
 import classes from "./OrderPreview.module.scss"
@@ -14,9 +16,14 @@ const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
   const orderData = structureOrderData(order)
   const { updateOrderStatus, getOrderStatus } = useOrderStore()
   const orderStatus = getOrderStatus(order?.id)
+  const navigate = useNavigate()
 
   const updateStatus = (newStatus: OrderStatus) => {
     updateOrderStatus(order.id, newStatus)
+  }
+
+  const handleGoToRoute = () => {
+    navigate(`${PRIVATE_ROUTES.ROUTES_PATH}/${order.id}`)
   }
 
   if (!order) {
@@ -57,7 +64,11 @@ const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
           <div>
             Статус заказа <Select value={orderStatus} onChange={updateStatus} />
           </div>
-          <Button>Проложить маршрут</Button>
+          {orderStatus === "new" ? (
+            <Button onClick={handleGoToRoute}>Проложить маршрут</Button>
+          ) : (
+            <Button onClick={handleGoToRoute}>Перейти к маршруту</Button>
+          )}
         </div>
       </div>
     </div>
