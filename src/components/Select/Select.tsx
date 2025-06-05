@@ -20,7 +20,6 @@ export const Select: React.FC<Props> = ({ value, onChange }) => {
 
   const handleSelect = (option: OrderStatus) => {
     setIsOpen(false)
-    console.log("Выбран статус:", option)
     onChange?.(option)
   }
 

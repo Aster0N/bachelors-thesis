@@ -1,17 +1,18 @@
-import { Order } from "@/types/typesEntities"
 import { useEffect, useState } from "react"
 import { OrdersService } from "../../OrdersService"
+import { useOrderStore } from "../../store/ordersStore"
 import OrderPreview from "../OrderPreview/OrderPreview"
 import OrdersList from "../OrdersList/OrdersList"
 import PaginationControls from "../PaginationControls/PaginationControls"
 import classes from "./Orders.module.scss"
 
 const Orders = () => {
-  const [orders, setOrders] = useState<Order[]>([])
+  // const [orders, setOrders] = useState<Order[]>([])
   const [total, setTotal] = useState(0)
   const [page, setPage] = useState(
     () => Number(localStorage.getItem("orders_page")) || 0
   )
+  const { orders, setOrdersData } = useOrderStore()
   const [totalPages, setTotalPages] = useState(0)
   const [selectedOrderId, setSelectedOrderId] = useState<string | null>(() =>
     localStorage.getItem("selected_order_id")
@@ -20,7 +21,8 @@ const Orders = () => {
 
   const fetchData = async () => {
     const { data, total } = await OrdersService.fetchOrdersByPage(page)
-    setOrders(data)
+    // setOrders(data)
+    setOrdersData(data)
     setTotal(total)
     setTotalPages(Math.ceil(total / OrdersService.pageSize))
   }
