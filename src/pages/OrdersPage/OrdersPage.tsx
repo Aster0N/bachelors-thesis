@@ -1,4 +1,4 @@
-import Orders from "@/modules/Orders/components/Orders/Orders"
+import { Orders } from "@/modules/Orders/index.ts"
 
 const OrdersPage = () => {
   return (

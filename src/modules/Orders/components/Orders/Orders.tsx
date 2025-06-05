@@ -68,4 +68,4 @@ const Orders = () => {
   )
 }
 
-export default Orders
+export { Orders }

@@ -33,4 +33,4 @@ const HeaderNavbar = () => {
   )
 }
 
-export default HeaderNavbar
+export { HeaderNavbar }

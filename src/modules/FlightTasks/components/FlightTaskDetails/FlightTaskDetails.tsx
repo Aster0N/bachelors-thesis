@@ -82,7 +82,7 @@ const FlightTaskDetails: React.FC<FlightTaskDetailsProps> = ({
                     onChange={newValue => {
                       handleSelectChange(row.label, newValue)
                     }}
-										className={classes.blueSelect}
+                    className={classes.blueSelect}
                   />
                 ) : (
                   <HighlightedInfo
@@ -99,4 +99,4 @@ const FlightTaskDetails: React.FC<FlightTaskDetailsProps> = ({
   )
 }
 
-export default FlightTaskDetails
+export { FlightTaskDetails }

@@ -1,4 +1,4 @@
-import FlightTaskDetails from "@/modules/FlightTasks/components/FlightTaskDetails/FlightTaskDetails"
+import { FlightTaskDetails } from "@/modules/FlightTasks/index"
 import { useParams } from "react-router-dom"
 
 const RouteDetailsPage = () => {
