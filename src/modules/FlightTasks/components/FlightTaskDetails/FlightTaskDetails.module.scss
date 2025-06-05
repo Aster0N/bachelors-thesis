@@ -6,15 +6,12 @@
   padding: 20px;
 }
 
-.underline {
-  text-decoration: underline;
+.heading {
+  margin: 0;
 }
 
-.rowInfo {
-  margin: 5px 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.underline {
+  text-decoration: underline;
 }
 
 .contentWrapper {
@@ -24,11 +21,29 @@
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
 
-.ordersPreviewControls {
+.rowInfo {
+  margin: 5px 0;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 .blueSelect {
   background-color: $secondary;
+}
+
+.link {
+  background-color: $helper-40;
+  border-radius: $border-radius-m;
+  padding: 10px;
+  width: fit-content;
+  cursor: pointer;
+  margin: 10px 0 0 0;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: $page;
+    border: 1px solid $secondary;
+  }
 }

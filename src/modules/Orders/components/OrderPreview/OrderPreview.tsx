@@ -1,6 +1,7 @@
 import Button from "@/components/Button/Button"
 import HighlightedInfo from "@/components/HighlightedInfo/HighlightedInfo"
 import Select from "@/components/Select/Select"
+import { FlightTaskService } from "@/modules/FlightTasks/FlightTaskService"
 import { PRIVATE_ROUTES } from "@/router/routes"
 import { Order, OrderStatus } from "@/types/typesEntities"
 import { useNavigate } from "react-router-dom"
@@ -29,8 +30,11 @@ const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
     updateOrderStatus(order.id, newStatus)
   }
 
-  const handleGoToRoute = () => {
-    navigate(`${PRIVATE_ROUTES.ROUTES_PATH}/${order.id}`)
+  const handleGoToRoute = async () => {
+    const flightTask = await FlightTaskService.getFlightTaskByOrderId(order.id)
+    if (flightTask) {
+      navigate(`${PRIVATE_ROUTES.ROUTES_PATH}/${flightTask.id}`)
+    }
   }
 
   if (!order) {

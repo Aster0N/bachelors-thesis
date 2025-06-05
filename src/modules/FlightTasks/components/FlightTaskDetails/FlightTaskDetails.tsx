@@ -1,7 +1,11 @@
 import HighlightedInfo from "@/components/HighlightedInfo/HighlightedInfo"
 import Select from "@/components/Select/Select"
+import { OrdersService } from "@/modules/Orders/OrdersService"
+import { useOrderStore } from "@/modules/Orders/store/ordersStore"
+import { PRIVATE_ROUTES } from "@/router/routes"
 import { FlightTask } from "@/types/typesEntities"
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { FlightTaskService } from "../../FlightTaskService"
 import classes from "./FlightTaskDetails.module.scss"
 import { StructuredFlightTasks, structureFlightTaskData } from "./helpers"
@@ -16,6 +20,8 @@ const FlightTaskDetails: React.FC<FlightTaskDetailsProps> = ({
   const [flightTaskData, setFlightTaskData] = useState<FlightTask | null>(null)
   const [structuredFlightTaskData, setStructuredFlightTaskData] =
     useState<StructuredFlightTasks>([])
+  const navigate = useNavigate()
+  const { setPage } = useOrderStore()
 
   const fetchData = async () => {
     const flightTask = await FlightTaskService.getFlightTaskById(flightTaskId)
@@ -54,6 +60,27 @@ const FlightTaskDetails: React.FC<FlightTaskDetailsProps> = ({
     structureFlightTaskData(updatedFlightTask).then(setStructuredFlightTaskData)
   }
 
+  const handleLink = async (
+    type: string | undefined,
+    orderId: string | undefined
+  ) => {
+    if (!type || !orderId) return
+
+    const allOrders = await OrdersService.fetchAllOrders()
+    const pageSize = OrdersService.pageSize
+
+    const index = allOrders.findIndex(order => order.id === orderId)
+    if (index === -1) return
+
+    const pageIndex = Math.floor(index / pageSize)
+
+    localStorage.setItem("selected_order_id", orderId)
+    localStorage.setItem("orders_page", String(pageIndex))
+    setPage(pageIndex)
+
+    navigate(PRIVATE_ROUTES.ORDERS_PATH)
+  }
+
   useEffect(() => {
     fetchData()
   }, [])
@@ -64,11 +91,19 @@ const FlightTaskDetails: React.FC<FlightTaskDetailsProps> = ({
 
   return (
     <div className={classes.wrapper}>
-      <h3># {flightTaskData.id}</h3>
-      <span>{flightTaskData.order.club_name}</span>
+      <h3 className={classes.heading}># {flightTaskData.id.slice(-4)}</h3>
       <div className={classes.contentWrapper}>
         {structuredFlightTaskData.map(flightTaskInfo => (
-          <div className={classes.blockInfo} key={flightTaskInfo.heading}>
+          <div
+            className={[
+              classes.blockInfo,
+              flightTaskInfo.type == "link" ? classes.link : "",
+            ].join(" ")}
+            key={flightTaskInfo.heading}
+            onClick={() =>
+              handleLink(flightTaskInfo.type, flightTaskInfo.linkId)
+            }
+          >
             <p className={classes.rowInfo}>
               <big className={classes.underline}>{flightTaskInfo.heading}</big>
             </p>

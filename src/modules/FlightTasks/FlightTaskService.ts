@@ -28,10 +28,18 @@ export class FlightTaskService {
   }
 
   static getFlightTaskById = async (
-    flightTaskId: FlightTask["order"]["id"]
+    flightTaskId: FlightTask["id"]
   ): Promise<FlightTask | undefined> => {
     const flightTasks = await this.fetchFlightTasksData()
     const flightTask = flightTasks.find(task => task.id == flightTaskId)
+    return flightTask
+  }
+
+  static getFlightTaskByOrderId = async (
+    orderId: FlightTask["order"]["id"]
+  ): Promise<FlightTask | undefined> => {
+    const flightTasks = await this.fetchFlightTasksData()
+    const flightTask = flightTasks.find(task => task.order.id == orderId)
     return flightTask
   }
 

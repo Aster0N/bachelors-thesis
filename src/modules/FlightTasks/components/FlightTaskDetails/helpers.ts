@@ -9,6 +9,8 @@ export type StructuredFlightTasks = {
     isSelect?: boolean
     options?: string[]
   }[]
+  linkId?: string
+  type?: string
 }[]
 
 export const structureFlightTaskData = async (
@@ -17,7 +19,7 @@ export const structureFlightTaskData = async (
   const cameras = await FlightTaskService.getCameras()
   const drones = await FlightTaskService.getDrones()
   const cameraOptions = cameras.map(cam => cam.model).slice(0, 10)
-  const dronesOptions = drones.map(drone => drone.model).slice(0, 5)
+  const dronesOptions = drones.map(drone => drone.model).slice(0, 8)
 
   return [
     {
@@ -29,6 +31,8 @@ export const structureFlightTaskData = async (
           data: `${flightTask.order.first_name} ${flightTask.order.last_name}`,
         },
       ],
+      linkId: flightTask.order.id,
+      type: "link",
     },
     {
       heading: "Настройки видеосъёмки",
