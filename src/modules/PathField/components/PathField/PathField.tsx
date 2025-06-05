@@ -5,10 +5,10 @@ import Input from "@/components/Input/Input"
 import type { Point } from "@/types/points"
 import { LockKeyhole, LockKeyholeOpen } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
-import { initialPointInfo } from "../consts"
-import PointsService from "../services/PointsService/PointService"
-import SVGFieldService from "../services/SVGFieldService/SVGFieldService"
-import { usePointsStore } from "../store/pointsStore"
+import { initialPointInfo } from "../../consts"
+import PointsService from "../../services/PointsService/PointService"
+import SVGFieldService from "../../services/SVGFieldService/SVGFieldService"
+import { usePointsStore } from "../../store/pointsStore"
 import classes from "./PathField.module.scss"
 
 const PathField = () => {
@@ -125,8 +125,6 @@ const PathField = () => {
     }))
   }
 
-  // TODO FLIGHT TASK STORE
-
   return (
     <div className={classes.pathField}>
       {isContextMenuOpen && (
@@ -140,6 +138,7 @@ const PathField = () => {
         >
           <Input
             type="number"
+            label="высота"
             value={contextMenuPointInfo.z}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               changeZCoord(e)

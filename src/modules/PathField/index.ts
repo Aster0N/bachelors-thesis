@@ -1,1 +1,1 @@
-export { PathField } from "./components/PathField"
+export { PathField } from "./components/PathField/PathField"

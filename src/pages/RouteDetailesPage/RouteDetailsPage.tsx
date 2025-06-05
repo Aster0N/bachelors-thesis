@@ -17,7 +17,6 @@ const RouteDetailsPage = () => {
     const fetchFlightTask = async () => {
       const flightTask = await FlightTaskService.getFlightTaskById(id)
       if (flightTask) {
-        console.log(flightTask.route)
         usePointsStore.getState().setPointsForRoute(flightTask.route)
       }
     }
