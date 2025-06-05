@@ -1,15 +1,11 @@
 import DynamicTable from "@/components/DynamicTable/DynamicTable"
 import FlightTaskCard from "@/components/FlightTaskCard/FlightTaskCard"
+import { OrdersService } from "@/modules/Orders/OrdersService"
 import { PRIVATE_ROUTES } from "@/router/routes"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { FlightTaskPreview, OrdersPreview } from "../../types/typesDataPreview"
-import {
-  fetchFlightTasksData,
-  fetchOrdersData,
-  getFlightTasksPreviewData,
-  getOrdersPreviewData,
-} from "./helpers"
+import { fetchFlightTasksData, getFlightTasksPreviewData } from "./helpers"
 import classes from "./HomePage.module.scss"
 
 const HomePage = () => {
@@ -18,10 +14,11 @@ const HomePage = () => {
     useState<FlightTaskPreview[]>()
 
   const fetchData = async () => {
-    const ordersData = await fetchOrdersData()
+    const ordersData = await OrdersService.fetchOrdersData()
     const flightTasksData = await fetchFlightTasksData()
 
-    const ordersPreviewData: OrdersPreview[] = getOrdersPreviewData(ordersData)
+    const ordersPreviewData: OrdersPreview[] =
+      OrdersService.getOrdersPreviewData(ordersData)
     const flightTasksPreviewData: FlightTaskPreview[] =
       getFlightTasksPreviewData(flightTasksData)
 

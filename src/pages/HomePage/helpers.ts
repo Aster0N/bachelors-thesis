@@ -1,17 +1,5 @@
-//import { api } from "@/api/api"
-import { FlightTaskPreview, OrdersPreview } from "@/types/typesDataPreview"
-import { FlightTask, Order } from "@/types/typesEntities"
-
-export const fetchOrdersData = async () => {
-  const data = await fetch("/test_data/orders.json")
-    .then(data => data.json())
-    .then(json => json.orders)
-
-  //? doesn't have privilege
-  // const { data } = await api.get<Order[]>("/orders/all")
-
-  return data
-}
+import { FlightTaskPreview } from "@/types/typesDataPreview"
+import { FlightTask } from "@/types/typesEntities"
 
 export const fetchFlightTasksData = async () => {
   const flightTasks = await fetch("/test_data/flight_tasks.json")
@@ -19,17 +7,6 @@ export const fetchFlightTasksData = async () => {
     .then(json => json.flight_tasks)
 
   return flightTasks
-}
-
-export const getOrdersPreviewData = (orders: Order[]): OrdersPreview[] => {
-  return orders
-    .map((item: Order) => ({
-      date: item.order_date,
-      client: `${item.first_name} ${item.last_name}`,
-      email: item.email,
-      status: item.status,
-    }))
-    .slice(0, 5)
 }
 
 export const getFlightTasksPreviewData = (

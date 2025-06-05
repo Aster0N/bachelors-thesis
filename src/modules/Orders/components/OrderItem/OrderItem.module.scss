@@ -1,0 +1,20 @@
+@use "@/styles/variables.scss" as *;
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 13px;
+  border: 1px solid $text-dark;
+  border-radius: $border-radius-m;
+  margin: 0 0 10px 0;
+}
+
+.left {
+  text-overflow: ellipsis;
+}
+
+.right {
+  color: $secondary;
+  white-space: nowrap;
+}
