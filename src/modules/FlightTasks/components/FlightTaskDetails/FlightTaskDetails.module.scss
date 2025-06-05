@@ -1,15 +1,5 @@
 @use "@/styles/variables.scss" as *;
 
-.wrapper {
-  border: 1px solid $text-dark;
-  border-radius: $border-radius-m;
-  padding: 20px;
-}
-
-.heading {
-  margin: 0;
-}
-
 .underline {
   text-decoration: underline;
 }

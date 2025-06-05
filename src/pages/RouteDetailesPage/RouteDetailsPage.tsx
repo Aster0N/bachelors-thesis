@@ -1,5 +1,6 @@
 import { FlightTaskDetails } from "@/modules/FlightTasks/index"
 import { useParams } from "react-router-dom"
+import classes from "./RouteDetailsPage.module.scss"
 
 const RouteDetailsPage = () => {
   const { id } = useParams()
@@ -9,10 +10,13 @@ const RouteDetailsPage = () => {
   }
 
   return (
-    <div>
+    <>
       <h2>Маршрут #{id}</h2>
-      <FlightTaskDetails flightTaskId={id} />
-    </div>
+      <div className={classes.wrapper}>
+        <h3 className={classes.heading}>#{id.slice(-4)}</h3>
+        <FlightTaskDetails flightTaskId={id} />
+      </div>
+    </>
   )
 }
 

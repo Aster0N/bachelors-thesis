@@ -90,46 +90,41 @@ const FlightTaskDetails: React.FC<FlightTaskDetailsProps> = ({
   }
 
   return (
-    <div className={classes.wrapper}>
-      <h3 className={classes.heading}># {flightTaskData.id.slice(-4)}</h3>
-      <div className={classes.contentWrapper}>
-        {structuredFlightTaskData.map(flightTaskInfo => (
-          <div
-            className={[
-              classes.blockInfo,
-              flightTaskInfo.type == "link" ? classes.link : "",
-            ].join(" ")}
-            key={flightTaskInfo.heading}
-            onClick={() =>
-              handleLink(flightTaskInfo.type, flightTaskInfo.linkId)
-            }
-          >
-            <p className={classes.rowInfo}>
-              <big className={classes.underline}>{flightTaskInfo.heading}</big>
-            </p>
-            {flightTaskInfo.rows.map(row => (
-              <div className={classes.rowInfo} key={row.label}>
-                {row.label}
-                {row.isSelect ? (
-                  <Select
-                    value={row.data}
-                    options={row.options || []}
-                    onChange={newValue => {
-                      handleSelectChange(row.label, newValue)
-                    }}
-                    className={classes.blueSelect}
-                  />
-                ) : (
-                  <HighlightedInfo
-                    info={row.data}
-                    textOverflow={row.label == "id"}
-                  />
-                )}
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
+    <div className={classes.contentWrapper}>
+      {structuredFlightTaskData.map(flightTaskInfo => (
+        <div
+          className={[
+            classes.blockInfo,
+            flightTaskInfo.type == "link" ? classes.link : "",
+          ].join(" ")}
+          key={flightTaskInfo.heading}
+          onClick={() => handleLink(flightTaskInfo.type, flightTaskInfo.linkId)}
+        >
+          <p className={classes.rowInfo}>
+            <big className={classes.underline}>{flightTaskInfo.heading}</big>
+          </p>
+          {flightTaskInfo.rows.map(row => (
+            <div className={classes.rowInfo} key={row.label}>
+              {row.label}
+              {row.isSelect ? (
+                <Select
+                  value={row.data}
+                  options={row.options || []}
+                  onChange={newValue => {
+                    handleSelectChange(row.label, newValue)
+                  }}
+                  className={classes.blueSelect}
+                />
+              ) : (
+                <HighlightedInfo
+                  info={row.data}
+                  textOverflow={row.label == "id"}
+                />
+              )}
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   )
 }
