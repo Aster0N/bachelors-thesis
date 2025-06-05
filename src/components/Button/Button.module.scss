@@ -15,4 +15,14 @@
   &:focus {
     border: 2px solid $primary;
   }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.7;
+  }
+
+  &:disabled:hover,
+  &:disabled:focus {
+    border: 2px solid transparent;
+  }
 }

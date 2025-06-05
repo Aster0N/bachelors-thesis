@@ -14,7 +14,7 @@ const HomePage = () => {
     useState<FlightTaskPreview[]>()
 
   const fetchData = async () => {
-    const ordersData = await OrdersService.fetchOrdersData()
+    const ordersData = await OrdersService.fetchAllOrders()
     const flightTasksData = await fetchFlightTasksData()
 
     const ordersPreviewData: OrdersPreview[] =

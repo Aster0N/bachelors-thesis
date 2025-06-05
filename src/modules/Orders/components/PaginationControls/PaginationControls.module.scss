@@ -1,0 +1,21 @@
+@use "@/styles/variables.scss" as *;
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+	margin: 0 auto;
+}
+
+.controlBtn {
+  padding: 4px 8px 2px 8px;
+  border-radius: $border-radius-m;
+  background-color: #3d4d60;
+}
+
+.pageNumber {
+  padding: 10px 15px;
+  background-color: $primary;
+  border-radius: $border-radius-m;
+}

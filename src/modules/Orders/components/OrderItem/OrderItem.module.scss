@@ -5,9 +5,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 13px;
-  border: 1px solid $text-dark;
+  border: 2px solid $text-dark;
   border-radius: $border-radius-m;
   margin: 0 0 10px 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary;
+  }
+
+  &.active {
+    border: 2px solid $secondary;
+    background-color: $primary;
+  }
 }
 
 .left {
