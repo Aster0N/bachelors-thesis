@@ -1,6 +1,6 @@
 //import { api } from "@/api/api"
-import { OrdersPreview } from "@/types/typesDataPreview"
 import { Order } from "@/types/typesEntities"
+import { OrdersPreview } from "./types"
 
 export class OrdersService {
   public static pageSize = 5

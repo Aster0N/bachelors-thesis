@@ -1,10 +1,10 @@
-import type { FlightTaskPreview } from "@/types/typesDataPreview"
+import { FlightTaskPreview } from "@/modules/FlightTasks/types"
 import React from "react"
 import classes from "./FlightTaskCard.module.scss"
 
-const FlightTaskCard: React.FC<FlightTaskPreview> = ({ id, status, date }) => {
+const FlightTaskCard: React.FC<FlightTaskPreview> = ({ id, status, date, onClick }) => {
   return (
-    <div className={classes.card}>
+    <div className={classes.card} onClick={onClick}>
       <div className={classes.top}>
         <span className="_large">
           <b>Маршрут #{id.split("-").at(-1)}</b>

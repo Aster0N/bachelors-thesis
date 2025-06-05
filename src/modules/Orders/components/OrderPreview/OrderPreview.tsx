@@ -33,7 +33,7 @@ const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
   return (
     <div className={classes.ordersPreview}>
       <div>
-        <h3 className={classes.previewHeader}>Заявка #{order.id.slice(-4)}</h3>
+        <h3 className={classes.previewHeader}>Заявка #{order.id}</h3>
         <hr />
         <div className={classes.previewContent}>
           {orderData.map(orderInfo => (

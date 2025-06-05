@@ -12,7 +12,8 @@ const Orders = () => {
     localStorage.getItem("selected_order_id")
   )
 
-  const selectedOrder = pageOrders.find(order => order.id === selectedOrderId)
+  const selectedOrder =
+    pageOrders.find(order => order.id === selectedOrderId) || pageOrders[0]
 
   const nextPage = () => {
     const totalPages = Math.ceil(total / pageSize)
@@ -27,6 +28,10 @@ const Orders = () => {
     setSelectedOrderId(id)
     localStorage.setItem("selected_order_id", id)
   }
+
+  useEffect(() => {
+    handleSelectOrder(selectedOrder?.id)
+  }, [selectedOrder])
 
   useEffect(() => {
     fetchOrders()
