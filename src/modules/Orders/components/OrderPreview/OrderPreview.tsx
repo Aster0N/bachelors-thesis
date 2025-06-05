@@ -2,42 +2,18 @@ import Button from "@/components/Button/Button"
 import HighlightedInfo from "@/components/HighlightedInfo/HighlightedInfo"
 import { Order } from "@/types/typesEntities"
 import classes from "./OrderPreview.module.scss"
+import { structureOrderData } from "./helpers"
 
 type OrderPreviewProps = {
   order: Order
 }
 
 const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
-  const ordersData = [
-    {
-      heading: `${order.first_name} ${order.last_name}`,
-      rows: [
-        { label: "email", data: order.email },
-        { label: "запланированная дата", data: order.order_date },
-      ],
-    },
-    {
-      heading: "Клуб",
-      rows: [
-        { label: "название", data: order.club_name },
-        { label: "адрес", data: order.club_address },
-        { label: "id", data: order.club_id },
-      ],
-    },
-    {
-      heading: "Мероприятие",
-      rows: [
-        {
-          label: "Время начала",
-          data: order.start_time,
-        },
-        {
-          label: "Время окончания",
-          data: order.end_time,
-        },
-      ],
-    },
-  ]
+  if (!order) {
+    return <big>Ошибка получения заявки. Попробуйте позже</big>
+  }
+
+  const orderData = structureOrderData(order)
 
   return (
     <div className={classes.ordersPreview}>
@@ -45,7 +21,7 @@ const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
         <h3 className={classes.previewHeader}>Заявка #{order.id.slice(-4)}</h3>
         <hr />
         <div className={classes.previewContent}>
-          {ordersData.map(orderInfo => (
+          {orderData.map(orderInfo => (
             <div className={classes.blockInfo} key={orderInfo.heading}>
               <p className={classes.rowInfo}>
                 <big
