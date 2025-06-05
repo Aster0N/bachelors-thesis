@@ -10,6 +10,8 @@ import PointsService from "../../services/PointsService/PointService"
 import SVGFieldService from "../../services/SVGFieldService/SVGFieldService"
 import { usePointsStore } from "../../store/pointsStore"
 import classes from "./PathField.module.scss"
+import Img1 from '/img/field1.png'
+import Img2 from '/img/field2.png'
 
 const PathField = () => {
   const svgRef = useRef<SVGSVGElement | null>(null)
@@ -158,7 +160,13 @@ const PathField = () => {
         ref={svgRef}
         onClick={addPoint}
         onContextMenu={event => openContextMenu(event)}
-        style={{ pointerEvents: lockSVGField ? "none" : "all" }}
+        style={{
+          pointerEvents: lockSVGField ? "none" : "all",
+          backgroundImage: `url("${Img1}")`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
       />
       <div className={classes.actions}>
         <Button
