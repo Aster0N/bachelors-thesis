@@ -8,6 +8,8 @@ const HeaderNavbar = () => {
     { to: PRIVATE_ROUTES.AUTH_PATH, label: "Регистрация" },
     { to: PRIVATE_ROUTES.ROUTES_PATH, label: "Маршруты" },
     { to: PRIVATE_ROUTES.ORDERS_PATH, label: "Заявки" },
+    { to: PRIVATE_ROUTES.ROUTES_HISTORY_PATH, label: "История" },
+    { to: PRIVATE_ROUTES.ROUTES_REPORTS_PATH, label: "Отчеты" },
     { to: PRIVATE_ROUTES.PROFILE_PATH, label: "Профиль" },
   ]
 

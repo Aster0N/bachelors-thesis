@@ -1,12 +1,12 @@
 import { AuthService } from "@/modules/Auth/AuthService"
 import { useUserStore } from "@/modules/Auth/store/userStore"
-import { privateRoutes, publicRoutes } from "@/router/index.ts"
+import { adminRoutes, privateRoutes, publicRoutes } from "@/router/index.ts"
 import { useEffect, useState } from "react"
 import { Navigate, Route, Routes } from "react-router-dom"
-import { PRIVATE_ROUTES, PUBLIC_ROUTES } from "./routes"
+import { PUBLIC_ROUTES } from "./routes"
 
 const AppRouter = () => {
-  const { accessToken, setAuth, clearAuth } = useUserStore()
+  const { accessToken, setAuth, clearAuth, user } = useUserStore()
   const [isAuth, setIsAuth] = useState<boolean | null>(false)
   const [isPending, setIsPending] = useState(true)
 
@@ -32,6 +32,17 @@ const AppRouter = () => {
     return <div>Загрузка...</div>
   }
 
+  if (isAuth && user?.email == "Admin@1.com") {
+    return (
+      <Routes>
+        {adminRoutes?.map(route => (
+          <Route key={route.path} path={route.path} element={route.element} />
+        ))}
+        <Route path="*" element={<Navigate to={PUBLIC_ROUTES.FORBIDDEN} />} />
+      </Routes>
+    )
+  }
+
   return (
     <Routes>
       {!isAuth &&
@@ -44,14 +55,7 @@ const AppRouter = () => {
           <Route key={route.path} path={route.path} element={route.element} />
         ))}
 
-      <Route
-        path="*"
-        element={
-          <Navigate
-            to={isAuth ? PRIVATE_ROUTES.ROOT_PATH : PUBLIC_ROUTES.AUTH_PATH}
-          />
-        }
-      />
+      <Route path="*" element={<Navigate to={PUBLIC_ROUTES.FORBIDDEN} />} />
     </Routes>
   )
 }
