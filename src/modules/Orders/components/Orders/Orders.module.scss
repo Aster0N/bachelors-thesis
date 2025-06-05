@@ -1,7 +1,17 @@
+.ordersModule {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .ordersList {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 35vw;
-  min-height: 40vh;
+  width: 35vw;
+  min-height: 50vh;
+}
+
+.orderPreviewWrapper {
+  width: 100%;
 }

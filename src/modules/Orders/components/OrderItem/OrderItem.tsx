@@ -17,10 +17,11 @@ const OrderItem: React.FC<OrderItemProps> = ({ order, onClick, isActive }) => {
       onClick={onClick}
     >
       <div className={classes.left}>
-        <b>#{shortId}</b> / {order.order_date} / {order.email}
+        <b>#{shortId}</b> / {order.email}
       </div>
-      <div className={[classes.right, "_caption-bold"].join(" ")}>
-        {order.status}
+      <div className={classes.right}>
+        <span className={[classes.status, "_caption-bold"].join(' ')}>{order.status}</span>
+        <span className="_caption">{order.order_date}</span>
       </div>
     </div>
   )

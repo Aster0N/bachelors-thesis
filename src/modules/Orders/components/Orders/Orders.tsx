@@ -51,15 +51,17 @@ const Orders = () => {
   }, [page])
 
   return (
-    <div>
+    <>
       <p className="_caption">всего: {total}</p>
-      <div className={classes.ordersList}>
-        <div className={classes.orderListWrapper}>
-          <OrdersList
-            orderList={orders}
-            onSelect={handleSelectOrder}
-            selectedId={selectedOrderId}
-          />
+      <div className={classes.ordersModule}>
+        <div className={classes.ordersList}>
+          <div>
+            <OrdersList
+              orderList={orders}
+              onSelect={handleSelectOrder}
+              selectedId={selectedOrderId}
+            />
+          </div>
           <PaginationControls
             prevPage={prevPage}
             nextPage={nextPage}
@@ -71,11 +73,11 @@ const Orders = () => {
           {selectedOrder ? (
             <OrderPreview order={selectedOrder} />
           ) : (
-            <p className="_caption">Выберите заявку</p>
+            <p className="huge">Выберите заявку</p>
           )}
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

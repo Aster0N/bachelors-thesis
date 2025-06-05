@@ -26,6 +26,12 @@
 }
 
 .right {
-  color: $secondary;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
   white-space: nowrap;
+
+  .status {
+    color: $secondary;
+  }
 }
