@@ -439,7 +439,7 @@
         "club_name": "Ледовый каток Богатырь",
         "club_address": "Гаккелевская ул., 25, корп. 2Б"
       },
-      "operator": {
+      "operator": {	
         "id": "2aa0f4ff-536e-4ecd-b0b8-ffcca83cb363",
         "email": "operator@example.com",
         "is_superuser": false,

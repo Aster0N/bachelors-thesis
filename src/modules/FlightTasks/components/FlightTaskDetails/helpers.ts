@@ -23,7 +23,7 @@ export const structureFlightTaskData = async (
 
   return [
     {
-      heading: `К заказу #${flightTask.order.id.slice(-4)}`,
+      heading: `К заявке #${flightTask.order.id.slice(-4)}`,
       rows: [
         { label: "email", data: flightTask.order.email },
         {
