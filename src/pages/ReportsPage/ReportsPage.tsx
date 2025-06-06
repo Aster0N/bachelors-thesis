@@ -8,7 +8,7 @@ import classes from "./ReportsPage.module.scss"
 
 type ReportsTableRow = {
   date: string
-  club: string
+  clubId: string
   camera: string
   quality: string
   drone: string
@@ -25,7 +25,7 @@ const ReportsPage = () => {
   const downloadPdf = () => {
     const doc = new jsPDF()
 
-    doc.text("Отчёт по полётам", 14, 16)
+    doc.text("Flight report", 14, 16)
 
     autoTable(doc, {
       startY: 20,
@@ -59,7 +59,7 @@ const ReportsPage = () => {
       })
       .map(task => ({
         date: task.order.order_date,
-        club: task.order.club_name,
+        clubId: task.order.club_id,
         camera: task.camera.model,
         quality: `${task.camera.height_px}x${task.camera.width_px}`,
         drone: task.drone.model,
@@ -70,12 +70,12 @@ const ReportsPage = () => {
   }, [startDate, endDate, allTasks])
 
   const columns = [
-    { key: "date", label: "Дата" },
-    { key: "club", label: "Клуб" },
-    { key: "camera", label: "Камера" },
-    { key: "quality", label: "Качество" },
-    { key: "drone", label: "Квадрокоптер" },
-    { key: "email", label: "Почта клиента" },
+    { key: "date", label: "Data" },
+    { key: "clubId", label: "Club" },
+    { key: "camera", label: "Camera" },
+    { key: "quality", label: "Resolution" },
+    { key: "drone", label: "Drone" },
+    { key: "email", label: "Email" },
   ] as { key: keyof ReportsTableRow; label: string }[]
 
   return (
