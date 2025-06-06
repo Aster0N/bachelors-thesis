@@ -29,8 +29,8 @@ export const pointConsts = {
       colorHEX: "#B400FF",
     },
   ],
-  firstPointStroke: "#4490dd",
-  lastPointStrike: "#079a7d",
+  firstPointStroke: "#199f26",
+  lastPointStrike: "#e52c29",
   pointOnDragStroke: "#747bff",
 }
 

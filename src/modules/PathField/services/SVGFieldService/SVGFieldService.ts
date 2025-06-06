@@ -36,7 +36,7 @@ export default class SVGFieldService {
         if (i === pointsArray.length - 1) {
           return pointConsts.lastPointStrike
         }
-        return "none"
+        return "#444444"
       })
       .attr("stroke-width", 4)
   }
