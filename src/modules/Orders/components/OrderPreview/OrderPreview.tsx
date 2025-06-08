@@ -71,7 +71,7 @@ const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
         <hr />
         <div className={classes.ordersPreviewControls}>
           <div>
-            Статус заказа{" "}
+            Статус{" "}
             <Select
               value={orderStatus}
               onChange={updateStatus}
