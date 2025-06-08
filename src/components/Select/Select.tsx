@@ -24,11 +24,17 @@ export const Select = <T extends string>({
     onChange?.(option)
   }
 
+  const toggleSelect = () => {
+    if (!(options.length == 1 && value == options[0])) {
+      setIsOpen(prev => !prev)
+    }
+  }
+
   return (
     <div className={[classes.selectWrapper, "_caption"].join(" ")}>
       <div
         className={[classes.selectButton, className].join(" ")}
-        onClick={() => setIsOpen(prev => !prev)}
+        onClick={toggleSelect}
       >
         {value || placeholder} <ChevronDown />
       </div>

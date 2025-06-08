@@ -92,7 +92,7 @@ const RouteDetailsPage = () => {
     setUseTemplate(enabled)
 
     if (!enabled && id) {
-      // При выключении — сброс на маршрут из flightTask
+      setSelectedTemplate("")
       FlightTaskService.getFlightTaskById(id).then(flightTask => {
         if (flightTask) {
           usePointsStore.getState().setPointsForRoute(flightTask.route)
