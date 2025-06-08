@@ -38,9 +38,9 @@ const MapEvents = ({
 }
 
 const PathField = ({ mapCenter }: { mapCenter: [number, number] }) => {
-  const [map, setMap] = useState<L.Map | null>(null) // 🔧 для доступа к карте
-  const [svgOffset, setSvgOffset] = useState({ x: 0, y: 0 }) // 🔧 для позиционирования SVG
-  const svgContainerRef = useRef<HTMLDivElement | null>(null) // 🔧 новый ref
+  const [map, setMap] = useState<L.Map | null>(null) // для доступа к карте
+  const [svgOffset, setSvgOffset] = useState({ x: 0, y: 0 }) // для позиционирования SVG
+  const svgContainerRef = useRef<HTMLDivElement | null>(null) // новый ref
 
   const svgRef = useRef<SVGSVGElement | null>(null)
   const [isContextMenuOpen, setIsContextMenuOpen] = useState<boolean>(false)
@@ -167,13 +167,13 @@ const PathField = ({ mapCenter }: { mapCenter: [number, number] }) => {
     return map.unproject(point, map.getZoom())
   }
 
-  // 🔧 при перемещении карты пересчитываем SVG offset
+  // при перемещении карты пересчитываем SVG offset
   const handleMapMove = (mapInstance: L.Map) => {
     if (!svgContainerRef.current) return
     const topLeft = mapInstance.containerPointToLayerPoint([0, 0])
     const newOffset = { x: topLeft.x, y: topLeft.y }
 
-    // 🔧 Обновляем offset только если он изменился
+    // Обновляем offset только если он изменился
     setSvgOffset(prevOffset => {
       if (prevOffset.x !== newOffset.x || prevOffset.y !== newOffset.y) {
         return newOffset
@@ -184,7 +184,7 @@ const PathField = ({ mapCenter }: { mapCenter: [number, number] }) => {
 
   useEffect(() => {
     if (map) {
-      map.setView(mapCenter, map.getZoom()) // 🔧 перемещаем карту вручную
+      map.setView(mapCenter, map.getZoom()) // перемещаем карту вручную
     }
   }, [mapCenter])
 

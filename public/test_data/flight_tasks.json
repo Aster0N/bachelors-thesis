@@ -11,7 +11,7 @@
         "start_time": "13:00:00",
         "end_time": "15:00:00",
         "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
-        "status": "new",
+        "status": "in_processing",
         "club_name": "Центр пляжного спорта Динамо",
         "club_address": "проспект Динамо, 44Б"
       },
@@ -439,7 +439,7 @@
         "club_name": "Ледовый каток Богатырь",
         "club_address": "Гаккелевская ул., 25, корп. 2Б"
       },
-      "operator": {	
+      "operator": {
         "id": "2aa0f4ff-536e-4ecd-b0b8-ffcca83cb363",
         "email": "operator@example.com",
         "is_superuser": false,
@@ -677,6 +677,300 @@
         "max_focal_length": 35,
         "zoom_ratio": 2.9,
         "club_id": "88a5c3f4-055c-4d6d-84eb-93e255504eec"
+      }
+    },
+    {
+      "id": "5004a5fe-5d78-4309-b767-1bdcf32d6936",
+      "order": {
+        "id": "8c1e9491-fa82-4d3c-95c7-24a3ce0c4323",
+        "first_name": "Иван",
+        "last_name": "Петров",
+        "email": "ivan.petrov@mail.com",
+        "order_date": "2025-06-15",
+        "start_time": "10:00:00",
+        "end_time": "12:00:00",
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+        "status": "new",
+        "club_name": "Клуб пляжного волейбола Rio",
+        "club_address": "Елагин остров"
+      },
+      "operator": {
+        "id": "6acfec08-8a1a-499d-9a8a-3d5bcc32ee38",
+        "email": "admin@example.com",
+        "username": "Admin",
+        "is_superuser": true
+      },
+      "route": {
+        "id": "732c0448-841c-47b0-82c2-e88d6809cd81",
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+        "points": []
+      },
+      "drone": {
+        "id": "f739cc4f-5fdd-48bd-a3ac-b353b3719f76",
+        "model": "Yuneec H520",
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6",
+        "battery_charge": 65
+      },
+      "camera": {
+        "id": "c8d9e0f1-a2b3-1ec5-d6e7-f8a9b0c1d2e3",
+        "model": "Autel EVO Nano+ Camera",
+        "width_px": 5472,
+        "height_px": 3648,
+        "fps": 30,
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+      },
+      "lens": {
+        "id": "e2f3a4b5-c6d7-5ae9-f0a1-b2c3d4e5f6a7",
+        "model": "DJI DL 18mm f/2.8",
+        "min_focal_length": 18,
+        "max_focal_length": 18,
+        "zoom_ratio": 1,
+        "club_id": "1d13c146-5801-4100-a254-af87f750fde6"
+      }
+    },
+    {
+      "id": "ffb18251-f3e6-4394-a9cc-baa24d2afeb7",
+      "order": {
+        "id": "b6aa52e1-723e-4fa4-bf6d-938599476fe5",
+        "first_name": "Алексей",
+        "last_name": "Кузнецов",
+        "email": "al.kuznetsov@yandex.ru",
+        "order_date": "2025-06-20",
+        "start_time": "09:00:00",
+        "end_time": "11:00:00",
+        "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+        "status": "new",
+        "club_name": "Клуб пляжного волейбола Rio",
+        "club_address": "Елагин остров"
+      },
+      "operator": {
+        "id": "54647859-35b7-4fdf-a82c-a64a468bb48c",
+        "email": "user@example.com",
+        "username": "User",
+        "is_superuser": false
+      },
+      "route": {
+        "id": "a1a79d47-fea6-41be-b454-2b65761ac9d8",
+        "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+        "points": []
+      },
+      "drone": {
+        "id": "f739cc4f-5fdd-48bd-a3ac-b353b3719f76",
+        "model": "Yuneec H520",
+        "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d",
+        "battery_charge": 65
+      },
+      "camera": {
+        "id": "b7c8d9e0-f1a2-0db4-c5d6-e7f8a9b0c1d2",
+        "model": "DJI Zenmuse X9-8K",
+        "width_px": 8192,
+        "height_px": 4320,
+        "fps": 75,
+        "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d"
+      },
+      "lens": {
+        "id": "e2f3a4b5-c6d7-5ae9-f0a1-b2c3d4e5f6a7",
+        "model": "DJI DL 18mm f/2.8",
+        "min_focal_length": 18,
+        "max_focal_length": 18,
+        "zoom_ratio": 1,
+        "club_id": "6dfbd445-c9e7-4109-b7a2-742d44be538d"
+      }
+    },
+    {
+      "id": "25fadee6-503d-4c72-bd81-bd766393c1da",
+      "order": {
+        "id": "78131ef6-e8c1-434e-a15e-a70308a625ca",
+        "first_name": "Мария",
+        "last_name": "Фёдорова",
+        "email": "maria.fedorova@gmail.com",
+        "order_date": "2025-07-22",
+        "start_time": "15:00:00",
+        "end_time": "17:00:00",
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+        "status": "new",
+        "club_name": "Спортивный комплекс Хоккейный город СКА",
+        "club_address": "Российский просп., 6"
+      },
+      "operator": {
+        "id": "2aa0f4ff-536e-4ecd-b0b8-ffcca83cb363",
+        "email": "operator@example.com",
+        "username": "Operator",
+        "is_superuser": false
+      },
+      "route": {
+        "id": "06fb5b2e-1ee2-4cfd-af1b-968b6c1540ee",
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+        "points": []
+      },
+      "drone": {
+        "id": "a8923a06-156c-4108-95e7-a4b1d554016b",
+        "model": "DJI Avata",
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9",
+        "battery_charge": 92
+      },
+      "camera": {
+        "id": "cb5532da-74c1-4563-8bdf-05de2bb59f75",
+        "model": "Hasselblad A6D-100c",
+        "width_px": 11600,
+        "height_px": 8700,
+        "fps": 2,
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+      },
+      "lens": {
+        "id": "e8f9a0b1-c2d3-1ae5-f6a7-b8c9d0e1f2a3",
+        "model": "Panasonic Lumix G X Vario 12-35mm f/2.8 II",
+        "min_focal_length": 12,
+        "max_focal_length": 35,
+        "zoom_ratio": 2.9,
+        "club_id": "439ea7c2-4dd2-4dbb-8182-7d71ad02c1e9"
+      }
+    },
+    {
+      "id": "cc3dfcbe-c7b6-4418-b520-80dd8f1107ce",
+      "order": {
+        "id": "4dbc3712-10fd-4d8a-9f9b-4c908ffcb332",
+        "first_name": "Владимир",
+        "last_name": "Ленин",
+        "email": "ilyich@ussr.com",
+        "order_date": "2025-05-24",
+        "start_time": "15:55:00",
+        "end_time": "16:10:00",
+        "club_id": "d7863827-450d-4af2-b4f8-fc9bff7842fd",
+        "status": "new",
+        "club_name": "Центр пляжного спорта Динамо",
+        "club_address": "проспект Динамо, 44Б"
+      },
+      "operator": {
+        "id": "6acfec08-8a1a-499d-9a8a-3d5bcc32ee38",
+        "email": "admin@example.com",
+        "username": "Admin",
+        "is_superuser": true
+      },
+      "route": {
+        "id": "9db17823-f721-415a-a2ea-956284115133",
+        "club_id": "d7863827-450d-4af2-b4f8-fc9bff7842fd",
+        "points": []
+      },
+      "drone": {
+        "id": "01071116-a243-4948-a71e-3da3f478db7b",
+        "model": "DJI Phantom 4 RTK",
+        "club_id": "d7863827-450d-4af2-b4f8-fc9bff7842fd",
+        "battery_charge": 61
+      },
+      "camera": {
+        "id": "a7f2eebc-560f-48f7-a45f-ad81282a0760",
+        "model": "DJI Phantom 4 Pro V2.0",
+        "width_px": 5472,
+        "height_px": 3648,
+        "fps": 60,
+        "club_id": "d7863827-450d-4af2-b4f8-fc9bff7842fd"
+      },
+      "lens": {
+        "id": "f71df5dd-d37a-4dfe-95db-8abaa16a6645",
+        "model": "DJI DL 24mm f/2.8",
+        "min_focal_length": 24,
+        "max_focal_length": 24,
+        "zoom_ratio": 1,
+        "club_id": "d7863827-450d-4af2-b4f8-fc9bff7842fd"
+      }
+    },
+    {
+      "id": "44251b5a-aacb-4b6c-8da3-01bd50a8c070",
+      "order": {
+        "id": "cdfb53e6-d0b4-42ca-99ef-dc53caad3e4f",
+        "first_name": "Ольга",
+        "last_name": "Иванова",
+        "email": "olga.ivanova@mail.com",
+        "order_date": "2025-06-16",
+        "start_time": "16:00:00",
+        "end_time": "18:00:00",
+        "club_id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4",
+        "status": "new",
+        "club_name": "Ледовый каток Богатырь",
+        "club_address": "Гаккелевская ул., 25, корп. 2Б"
+      },
+      "operator": {
+        "id": "2aa0f4ff-536e-4ecd-b0b8-ffcca83cb363",
+        "email": "operator@example.com",
+        "username": "Operator",
+        "is_superuser": false
+      },
+      "route": {
+        "id": "c265b3b2-9be0-46ce-b4c3-c42f1ed6d060",
+        "club_id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4",
+        "points": []
+      },
+      "drone": {
+        "id": "67daf755-8136-4eb6-86a9-962331ef12cf",
+        "model": "DJI Inspire 3",
+        "club_id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4",
+        "battery_charge": 95
+      },
+      "camera": {
+        "id": "e0f1a2b3-c4d5-3ae7-f8a9-b0c1d2e3f4a5",
+        "model": "Autel EVO Nano+ Camera",
+        "width_px": 5472,
+        "height_px": 3648,
+        "fps": 30,
+        "club_id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4"
+      },
+      "lens": {
+        "id": "f3a4b5c6-d7e8-6bf0-a1b2-c3d4e5f6a7b8",
+        "model": "Panasonic Lumix G X Vario 12-35mm f/2.8 II",
+        "min_focal_length": 12,
+        "max_focal_length": 35,
+        "zoom_ratio": 2.9,
+        "club_id": "aff1d6dc-bc2b-42a4-9f83-2b1e1370b6b4"
+      }
+    },
+    {
+      "id": "b77e3f78-cc59-4f3a-825e-24fcb241b205",
+      "order": {
+        "id": "cee562bd-1998-4f11-a8ec-2ae73846c820",
+        "first_name": "Наталья",
+        "last_name": "Жукова",
+        "email": "natalia.zhukova@yandex.ru",
+        "order_date": "2025-06-24",
+        "start_time": "14:00:00",
+        "end_time": "16:00:00",
+        "club_id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f",
+        "status": "new",
+        "club_name": "Теннисный клуб Глория",
+        "club_address": "Московский парк Победы"
+      },
+      "operator": {
+        "id": "6acfec08-8a1a-499d-9a8a-3d5bcc32ee38",
+        "email": "admin@example.com",
+        "username": "Admin",
+        "is_superuser": true
+      },
+      "route": {
+        "id": "8748d8a3-5adc-4605-8f09-4deb29a0bc37",
+        "club_id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f",
+        "points": []
+      },
+      "drone": {
+        "id": "a206d1d4-a1d1-48c1-81af-71e98804a445",
+        "model": "WingtraOne GEN II",
+        "club_id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f",
+        "battery_charge": 75
+      },
+      "camera": {
+        "id": "c4d5e6f7-a8b9-7ec1-d2e3-f4a5b6c7d8e9",
+        "model": "Autel EVO Nano+ Camera",
+        "width_px": 5472,
+        "height_px": 3648,
+        "fps": 30,
+        "club_id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f"
+      },
+      "lens": {
+        "id": "cb7a6bbf-0b39-4e83-a89f-4b215f941516",
+        "model": "Fujinon MK 18-55mm T2.9",
+        "min_focal_length": 18,
+        "max_focal_length": 55,
+        "zoom_ratio": 3.1,
+        "club_id": "8af597ff-5f87-4cd8-8fae-d2c09f7d0b6f"
       }
     }
   ]

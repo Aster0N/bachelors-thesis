@@ -35,7 +35,7 @@ const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
     if (flightTask) {
       navigate(`${PRIVATE_ROUTES.ROUTES_PATH}/${flightTask.id}`)
     } else {
-      console.warn("СОЗДАТЬ МАРШРУТ")
+      console.warn(`@add ${order.id}`)
     }
   }
 

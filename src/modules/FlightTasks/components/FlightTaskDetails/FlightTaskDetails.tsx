@@ -89,25 +89,8 @@ const FlightTaskDetails: React.FC<FlightTaskDetailsProps> = ({
     return <big>Загрузка...</big>
   }
 
-  const isDataChangeable = () => {
-    return (
-      flightTaskData.order.status == "completed" ||
-      flightTaskData.order.status == "cancelled"
-    )
-  }
-
   return (
-    <div
-      className={[
-        classes.contentWrapper,
-        isDataChangeable() ? classes.lockInterface : "",
-      ].join(" ")}
-    >
-      {isDataChangeable() && (
-        <big className={classes.lockInterfaceStatus}>
-          {flightTaskData.order.status}
-        </big>
-      )}
+    <div className={classes.contentWrapper}>
       {structuredFlightTaskData.map(flightTaskInfo => (
         <div
           className={[
