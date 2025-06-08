@@ -6,36 +6,36 @@
       "points": [
         {
           "sequence_number": 1,
-          "latitude": 71,
-          "longitude": 132,
+          "latitude": 74.26370239257812,
+          "longitude": 197.25493621826172,
           "altitude": 0.0,
           "color": "#B400FF"
         },
         {
           "sequence_number": 2,
-          "latitude": 132,
-          "longitude": 44,
+          "latitude": 132.26370239257812,
+          "longitude": 75.25493621826172,
           "altitude": 5.4,
           "color": "#008CFF"
         },
         {
           "sequence_number": 3,
-          "latitude": 73,
-          "longitude": -7,
+          "latitude": 357.2637023925781,
+          "longitude": 99.25493621826172,
           "altitude": 19.4,
           "color": "#A9A9A9"
         },
         {
           "sequence_number": 4,
-          "latitude": 169,
-          "longitude": 58,
+          "latitude": 401.2637023925781,
+          "longitude": 229.25493621826172,
           "altitude": 7.6,
           "color": "#FFFFFF"
         },
         {
           "sequence_number": 5,
-          "latitude": 71,
-          "longitude": 132,
+          "latitude": 74,
+          "longitude": 197,
           "altitude": 0.0,
           "color": "#00D26A"
         }
@@ -47,43 +47,43 @@
       "points": [
         {
           "sequence_number": 1,
-          "latitude": 66,
-          "longitude": 96,
+          "latitude": 58.263702392578125,
+          "longitude": 226.25493621826172,
           "altitude": 0.0,
           "color": "#B400FF"
         },
         {
           "sequence_number": 2,
-          "latitude": 158,
-          "longitude": 184,
+          "latitude": 105.26370239257812,
+          "longitude": 73.25493621826172,
           "altitude": 18.3,
           "color": "#00D26A"
         },
         {
           "sequence_number": 3,
-          "latitude": 105,
-          "longitude": 259,
+          "latitude": 225.26370239257812,
+          "longitude": 215.25493621826172,
           "altitude": 10.2,
           "color": "#FFFFFF"
         },
         {
           "sequence_number": 4,
-          "latitude": 201,
-          "longitude": 355,
+          "latitude": 309.2637023925781,
+          "longitude": 88.25493621826172,
           "altitude": 16.1,
           "color": "#FFFFFF"
         },
         {
           "sequence_number": 5,
-          "latitude": 129,
-          "longitude": 263,
+          "latitude": 331.2637023925781,
+          "longitude": 285.2549362182617,
           "altitude": 5.1,
           "color": "#008CFF"
         },
         {
           "sequence_number": 6,
-          "latitude": 66,
-          "longitude": 96,
+          "latitude": 58,
+          "longitude": 226,
           "altitude": 0.0,
           "color": "#00D26A"
         }
@@ -95,36 +95,36 @@
       "points": [
         {
           "sequence_number": 1,
-          "latitude": 166,
-          "longitude": 243,
+          "latitude": 80.33169555664062,
+          "longitude": 128.25493621826172,
           "altitude": 0.0,
           "color": "#FF4F58"
         },
         {
           "sequence_number": 2,
-          "latitude": 222,
-          "longitude": 302,
+          "latitude": 226.33169555664062,
+          "longitude": 119.25493621826172,
           "altitude": 11.8,
           "color": "#A9A9A9"
         },
         {
           "sequence_number": 3,
-          "latitude": 276,
-          "longitude": 235,
+          "latitude": 297.3316955566406,
+          "longitude": 252.25493621826172,
           "altitude": 15.3,
           "color": "#A9A9A9"
         },
         {
           "sequence_number": 4,
-          "latitude": 199,
-          "longitude": 315,
+          "latitude": 217.3317108154297,
+          "longitude": 270.2549362182617,
           "altitude": 19.9,
           "color": "#B400FF"
         },
         {
           "sequence_number": 5,
-          "latitude": 166,
-          "longitude": 243,
+          "latitude": 80,
+          "longitude": 128,
           "altitude": 0.0,
           "color": "#B400FF"
         }
@@ -136,36 +136,43 @@
       "points": [
         {
           "sequence_number": 1,
-          "latitude": 141,
-          "longitude": 130,
+          "latitude": 329.3316955566406,
+          "longitude": 249.25493621826172,
           "altitude": 0.0,
           "color": "#FF4F58"
         },
         {
           "sequence_number": 2,
-          "latitude": 241,
-          "longitude": 50,
+          "latitude": 411.3316955566406,
+          "longitude": 221.25493621826172,
           "altitude": 10.8,
           "color": "#00D26A"
         },
         {
           "sequence_number": 3,
-          "latitude": 330,
-          "longitude": -5,
+          "latitude": 232.33169555664062,
+          "longitude": 110.25493621826172,
           "altitude": 19.7,
           "color": "#B400FF"
         },
         {
           "sequence_number": 4,
-          "latitude": 275,
-          "longitude": -62,
+          "latitude": 251.3317108154297,
+          "longitude": 258.2549362182617,
           "altitude": 19.4,
           "color": "#FF4F58"
         },
         {
           "sequence_number": 5,
-          "latitude": 141,
-          "longitude": 130,
+          "latitude": 117.33169555664062,
+          "longitude": 203.25493621826172,
+          "altitude": 12.0,
+          "color": "#00D26A"
+        },
+        {
+          "sequence_number": 6,
+          "latitude": 329,
+          "longitude": 249,
           "altitude": 0.0,
           "color": "#00D26A"
         }
@@ -177,36 +184,36 @@
       "points": [
         {
           "sequence_number": 1,
-          "latitude": 53,
-          "longitude": 187,
+          "latitude": 235.3317108154297,
+          "longitude": 250.25493621826172,
           "altitude": 0.0,
           "color": "#00D26A"
         },
         {
           "sequence_number": 2,
-          "latitude": 103,
-          "longitude": 128,
+          "latitude": 257.3316955566406,
+          "longitude": 80.25493621826172,
           "altitude": 12.4,
           "color": "#FF4F58"
         },
         {
           "sequence_number": 3,
-          "latitude": 195,
-          "longitude": 212,
+          "latitude": 130.33169555664062,
+          "longitude": 99.25493621826172,
           "altitude": 11.8,
           "color": "#B400FF"
         },
         {
           "sequence_number": 4,
-          "latitude": 270,
-          "longitude": 284,
+          "latitude": 117.33169555664062,
+          "longitude": 203.25493621826172,
           "altitude": 6.7,
           "color": "#008CFF"
         },
         {
           "sequence_number": 5,
-          "latitude": 53,
-          "longitude": 187,
+          "latitude": 235,
+          "longitude": 250,
           "altitude": 0.0,
           "color": "#A9A9A9"
         }
@@ -218,50 +225,57 @@
       "points": [
         {
           "sequence_number": 1,
-          "latitude": 154,
-          "longitude": 200,
+          "latitude": 64.73581123352051,
+          "longitude": 120.11083221435547,
           "altitude": 0.0,
           "color": "#FF4F58"
         },
         {
           "sequence_number": 2,
-          "latitude": 83,
-          "longitude": 289,
+          "latitude": 112.73581314086914,
+          "longitude": 63.110836029052734,
           "altitude": 9.4,
           "color": "#A9A9A9"
         },
         {
           "sequence_number": 3,
-          "latitude": 141,
-          "longitude": 365,
+          "latitude": 246.73580932617188,
+          "longitude": 167.1108512878418,
           "altitude": 19.5,
           "color": "#FF4F58"
         },
         {
           "sequence_number": 4,
-          "latitude": 211,
-          "longitude": 458,
+          "latitude": 371.7358093261719,
+          "longitude": 70.11083221435547,
           "altitude": 19.7,
           "color": "#00D26A"
         },
         {
           "sequence_number": 5,
-          "latitude": 124,
-          "longitude": 369,
+          "latitude": 298.7358093261719,
+          "longitude": 293.11083984375,
           "altitude": 16.2,
           "color": "#FFFFFF"
         },
         {
           "sequence_number": 6,
-          "latitude": 63,
-          "longitude": 443,
+          "latitude": 172.73580932617188,
+          "longitude": 260.11084747314453,
           "altitude": 8.0,
           "color": "#B400FF"
         },
         {
           "sequence_number": 7,
-          "latitude": 154,
-          "longitude": 200,
+          "latitude": 50.73581314086914,
+          "longitude": 184.11085510253906,
+          "altitude": 3.0,
+          "color": "#FFFFFF"
+        },
+        {
+          "sequence_number": 8,
+          "latitude": 64,
+          "longitude": 120,
           "altitude": 0.0,
           "color": "#FFFFFF"
         }
@@ -273,36 +287,36 @@
       "points": [
         {
           "sequence_number": 1,
-          "latitude": 31,
-          "longitude": 295,
+          "latitude": 137.33169555664062,
+          "longitude": 113.65843963623047,
           "altitude": 0.0,
           "color": "#008CFF"
         },
         {
           "sequence_number": 2,
-          "latitude": 124,
-          "longitude": 370,
+          "latitude": 325.3316955566406,
+          "longitude": 244.658447265625,
           "altitude": 16.3,
           "color": "#FFFFFF"
         },
         {
           "sequence_number": 3,
-          "latitude": 63,
-          "longitude": 314,
+          "latitude": 331.33168029785156,
+          "longitude": 99.658447265625,
           "altitude": 7.3,
           "color": "#FF4F58"
         },
         {
           "sequence_number": 4,
-          "latitude": -1,
-          "longitude": 241,
+          "latitude": 116.3316879272461,
+          "longitude": 228.658447265625,
           "altitude": 6.4,
           "color": "#008CFF"
         },
         {
           "sequence_number": 5,
-          "latitude": 31,
-          "longitude": 295,
+          "latitude": 137,
+          "longitude": 113,
           "altitude": 0.0,
           "color": "#FFFFFF"
         }

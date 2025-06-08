@@ -197,6 +197,7 @@ const PathField = ({ mapCenter }: { mapCenter: [number, number] }) => {
             y: contextMenuPointInfo.y,
             z: contextMenuPointInfo.z,
           }}
+          zIndex={500}
           onClose={closeContextMenu}
         >
           <Input
@@ -213,7 +214,7 @@ const PathField = ({ mapCenter }: { mapCenter: [number, number] }) => {
             selected={contextMenuPointInfo?.hex}
             onChange={handleSelectColorChange}
           ></ColorDropdown>
-          <Button onClick={deletePoint}>delete</Button>
+          <Button onClick={deletePoint}>удалить</Button>
         </ContextMenu>
       )}
 

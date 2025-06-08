@@ -17,6 +17,13 @@ html {
   flex-direction: column;
 }
 
+.leaflet-bottom.leaflet-right,
+.leaflet-control-attribution.leaflet-control {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
 a {
   color: inherit;
 }
