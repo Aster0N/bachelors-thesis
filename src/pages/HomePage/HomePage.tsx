@@ -1,11 +1,12 @@
 import DynamicTable from "@/components/DynamicTable/DynamicTable"
 import FlightTaskCard from "@/components/FlightTaskCard/FlightTaskCard"
 import { FlightTaskService } from "@/modules/FlightTasks/FlightTaskService"
+import { FlightTaskPreview } from "@/modules/FlightTasks/types"
 import { OrdersService } from "@/modules/Orders/OrdersService"
+import { OrdersPreview } from "@/modules/Orders/types"
 import { PRIVATE_ROUTES } from "@/router/routes"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { FlightTaskPreview, OrdersPreview } from "../../types/typesDataPreview"
 import classes from "./HomePage.module.scss"
 
 const HomePage = () => {

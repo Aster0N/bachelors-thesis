@@ -6,7 +6,7 @@ import { PRIVATE_ROUTES } from "@/router/routes"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { initialState, loginFormConfig } from "../../constants/formConfig"
-import { validateLoginForm } from "../../helpers/formValidation"
+import { validateLoginForm } from "../../helpers/loginFormValidation"
 import type { LoginFormData } from "../../types/types"
 import classes from "./LoginForm.module.scss"
 
