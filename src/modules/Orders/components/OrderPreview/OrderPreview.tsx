@@ -32,7 +32,6 @@ const OrderPreview: React.FC<OrderPreviewProps> = ({ order }) => {
 
   const handleGoToRoute = async () => {
     const flightTask = await FlightTaskService.getFlightTaskByOrderId(order.id)
-    console.log(flightTask)
     if (flightTask) {
       navigate(`${PRIVATE_ROUTES.ROUTES_PATH}/${flightTask.id}`)
     } else {

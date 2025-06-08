@@ -37,9 +37,7 @@ const MapEvents = ({
   return null
 }
 
-const INITIAL_CENTER: [number, number] = [55.751244, 37.618423]
-
-const PathField = () => {
+const PathField = ({ mapCenter }: { mapCenter: [number, number] }) => {
   const [map, setMap] = useState<L.Map | null>(null) // 🔧 для доступа к карте
   const [svgOffset, setSvgOffset] = useState({ x: 0, y: 0 }) // 🔧 для позиционирования SVG
   const svgContainerRef = useRef<HTMLDivElement | null>(null) // 🔧 новый ref
@@ -80,8 +78,6 @@ const PathField = () => {
     }
     if (map) {
       const latlng = svgToLatLng(newPoint.x, newPoint.y, map)
-      console.log("Точка на карте:", latlng.lat, latlng.lng)
-      // здесь можно сохранять lat/lng вместе с точкой
     }
     setPoints({
       ...points,
@@ -162,18 +158,6 @@ const PathField = () => {
     }))
   }
 
-  const latLngToSvg = (
-    latlng: L.LatLng,
-    map: L.Map
-  ): { x: number; y: number } => {
-    const point = map.project(latlng, map.getZoom())
-    const container = map.getContainer()
-    return {
-      x: point.x - container.getBoundingClientRect().left,
-      y: point.y - container.getBoundingClientRect().top,
-    }
-  }
-
   const svgToLatLng = (x: number, y: number, map: L.Map): L.LatLng => {
     const container = map.getContainer()
     const point = L.point(
@@ -197,6 +181,12 @@ const PathField = () => {
       return prevOffset
     })
   }
+
+  useEffect(() => {
+    if (map) {
+      map.setView(mapCenter, map.getZoom()) // 🔧 перемещаем карту вручную
+    }
+  }, [mapCenter])
 
   return (
     <div className={classes.pathField}>
@@ -230,7 +220,7 @@ const PathField = () => {
       <div style={{ position: "relative", width: "100%", height: "45vh" }}>
         {/* Карта — ФОН */}
         <MapContainer
-          center={INITIAL_CENTER}
+          center={mapCenter}
           zoom={18}
           scrollWheelZoom={false}
           dragging={true}
@@ -243,7 +233,7 @@ const PathField = () => {
             attribution="&copy; OpenStreetMap contributors"
           />
           <Marker
-            position={INITIAL_CENTER}
+            position={mapCenter}
             icon={L.icon({
               iconUrl:
                 "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",

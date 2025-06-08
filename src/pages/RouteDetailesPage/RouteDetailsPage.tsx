@@ -28,6 +28,9 @@ const RouteDetailsPage = () => {
   const [selectedTemplate, setSelectedTemplate] = useState<string>("")
   const [flightTaskClubId, setFlightTaskClubId] = useState<string | null>(null)
   const [useTemplate, setUseTemplate] = useState<boolean>(false)
+  const [clubCoords, setClubCoords] = useState<[number, number]>([
+    55.751244, 37.618423,
+  ])
 
   const { setPoints } = usePointsStore()
 
@@ -38,6 +41,10 @@ const RouteDetailsPage = () => {
       if (flightTask) {
         usePointsStore.getState().setPointsForRoute(flightTask.route)
         setFlightTaskClubId(flightTask.route.club_id)
+        const clubData = await FlightTaskService.getClubData(
+          flightTask.route.club_id
+        )
+        setClubCoords([clubData.latitude, clubData.longitude])
       }
     }
 
@@ -111,7 +118,7 @@ const RouteDetailsPage = () => {
         <div className={classes.flightTaskContainer}>
           <FlightTaskDetails flightTaskId={id} />
           <div className={classes.fieldManagement}>
-            <PathField />
+            <PathField mapCenter={clubCoords} />
             <div>
               <div className={classes.checkboxBlock}>
                 <label>

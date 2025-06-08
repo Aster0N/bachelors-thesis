@@ -1,4 +1,4 @@
-import { Camera, Drone, FlightTask } from "@/types/typesEntities"
+import { Camera, Club, Drone, FlightTask } from "@/types/typesEntities"
 import { FlightTaskPreview } from "./types"
 
 export class FlightTaskService {
@@ -57,5 +57,15 @@ export class FlightTaskService {
       .then(json => json.drones)
 
     return cameras
+  }
+
+  static getClubData = async (id: string): Promise<Club> => {
+    const clubs = await fetch("/test_data/clubs.json")
+      .then(data => data.json())
+      .then(json => json.clubs)
+
+    const clubData = clubs.find((club: Club) => club.id == id)
+
+    return clubData
   }
 }
