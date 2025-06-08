@@ -10,9 +10,40 @@ import PointsService from "../../services/PointsService/PointService"
 import SVGFieldService from "../../services/SVGFieldService/SVGFieldService"
 import { usePointsStore } from "../../store/pointsStore"
 import classes from "./PathField.module.scss"
-import Img1 from "/img/field1.png"
+// import Img1 from "/img/field1.png"
+import L from "leaflet"
+import "leaflet/dist/leaflet.css"
+import { MapContainer, Marker, TileLayer, useMapEvent } from "react-leaflet"
+
+import { useMap } from "react-leaflet"
+
+const MapEvents = ({
+  onInit,
+  onMove,
+}: {
+  onInit?: (map: L.Map) => void
+  onMove?: (map: L.Map) => void
+}) => {
+  const map = useMap()
+
+  useEffect(() => {
+    if (onInit) onInit(map)
+  }, [map, onInit])
+
+  useMapEvent("move", () => {
+    if (onMove) onMove(map)
+  })
+
+  return null
+}
+
+const INITIAL_CENTER: [number, number] = [55.751244, 37.618423]
 
 const PathField = () => {
+  const [map, setMap] = useState<L.Map | null>(null) // 🔧 для доступа к карте
+  const [svgOffset, setSvgOffset] = useState({ x: 0, y: 0 }) // 🔧 для позиционирования SVG
+  const svgContainerRef = useRef<HTMLDivElement | null>(null) // 🔧 новый ref
+
   const svgRef = useRef<SVGSVGElement | null>(null)
   const [isContextMenuOpen, setIsContextMenuOpen] = useState<boolean>(false)
   const [contextMenuPointInfo, setContextMenuPointInfo] =
@@ -46,6 +77,11 @@ const PathField = () => {
     const newPoint = PointsService.addPoint(svgRef, event, points)
     if (!newPoint) {
       return
+    }
+    if (map) {
+      const latlng = svgToLatLng(newPoint.x, newPoint.y, map)
+      console.log("Точка на карте:", latlng.lat, latlng.lng)
+      // здесь можно сохранять lat/lng вместе с точкой
     }
     setPoints({
       ...points,
@@ -126,6 +162,42 @@ const PathField = () => {
     }))
   }
 
+  const latLngToSvg = (
+    latlng: L.LatLng,
+    map: L.Map
+  ): { x: number; y: number } => {
+    const point = map.project(latlng, map.getZoom())
+    const container = map.getContainer()
+    return {
+      x: point.x - container.getBoundingClientRect().left,
+      y: point.y - container.getBoundingClientRect().top,
+    }
+  }
+
+  const svgToLatLng = (x: number, y: number, map: L.Map): L.LatLng => {
+    const container = map.getContainer()
+    const point = L.point(
+      x + container.getBoundingClientRect().left,
+      y + container.getBoundingClientRect().top
+    )
+    return map.unproject(point, map.getZoom())
+  }
+
+  // 🔧 при перемещении карты пересчитываем SVG offset
+  const handleMapMove = (mapInstance: L.Map) => {
+    if (!svgContainerRef.current) return
+    const topLeft = mapInstance.containerPointToLayerPoint([0, 0])
+    const newOffset = { x: topLeft.x, y: topLeft.y }
+
+    // 🔧 Обновляем offset только если он изменился
+    setSvgOffset(prevOffset => {
+      if (prevOffset.x !== newOffset.x || prevOffset.y !== newOffset.y) {
+        return newOffset
+      }
+      return prevOffset
+    })
+  }
+
   return (
     <div className={classes.pathField}>
       {isContextMenuOpen && (
@@ -154,19 +226,55 @@ const PathField = () => {
           <Button onClick={deletePoint}>delete</Button>
         </ContextMenu>
       )}
-      <svg
-        className={classes.field}
-        ref={svgRef}
-        onClick={addPoint}
-        onContextMenu={event => openContextMenu(event)}
-        style={{
-          pointerEvents: lockSVGField ? "none" : "all",
-          backgroundImage: `url("${Img1}")`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-        }}
-      />
+
+      <div style={{ position: "relative", width: "100%", height: "45vh" }}>
+        {/* Карта — ФОН */}
+        <MapContainer
+          center={INITIAL_CENTER}
+          zoom={18}
+          scrollWheelZoom={false}
+          dragging={true}
+          zoomControl={false}
+          doubleClickZoom={false}
+          style={{ height: "100%", width: "100%" }}
+        >
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution="&copy; OpenStreetMap contributors"
+          />
+          <Marker
+            position={INITIAL_CENTER}
+            icon={L.icon({
+              iconUrl:
+                "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+            })}
+          />
+          <MapEvents
+            onInit={mapInstance => setMap(mapInstance)}
+            onMove={handleMapMove}
+          />
+        </MapContainer>
+
+        {/* SVG поверх карты */}
+        <svg
+          className={classes.field}
+          ref={svgRef}
+          onClick={addPoint}
+          onContextMenu={openContextMenu}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            zIndex: 400,
+            pointerEvents: lockSVGField ? "none" : "all",
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      </div>
+
       <div className={classes.actions}>
         <Button
           onClick={() => setIsEditable(!isEditable)}
