@@ -5,10 +5,8 @@
 }
 
 .contentWrapper {
-  width: 40%;
   display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(1, minmax(200px, 1fr));
 
   &.lockInterface {
     pointer-events: none;
